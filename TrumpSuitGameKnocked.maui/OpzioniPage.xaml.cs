@@ -54,12 +54,12 @@ public partial class OpzioniPage : ContentPage
         }
         catch (FormatException ex)
         {
-            Snackbar.Make($"{App.d["ValoreNonValido"]}").Show(App.cancellationTokenSource.Token);
+            await Snackbar.Make($"{App.d["ValoreNonValido"]}").Show(App.cancellationTokenSource.Token);
             return;
         }
         if (secondi <5 || secondi>20)
         {
-            Snackbar.Make($"{App.d["ValoreNonValido"]}").Show(App.cancellationTokenSource.Token);
+            await Snackbar.Make($"{App.d["ValoreNonValido"]}").Show(App.cancellationTokenSource.Token);
             return;
         }
         Preferences.Set("secondi", secondi);

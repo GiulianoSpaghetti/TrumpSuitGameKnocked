@@ -8,7 +8,7 @@
     <system:String x:Key="NelMazzoRimangono">Restam&#160;</system:String>
     <system:String x:Key="carte">&#160;cartas no baralho</system:String>
     <system:String x:Key="IlSemeDiBriscolaE">A carta de trunfo é</system:String>
-    <system:String x:Key="BriscolaDaPunti">A Carta que designa o naipe de trunfo pode marcar pontos</system:String>
+    <system:String x:Key="BriscolaDaPunti">>A cartão que designa o naipe de trunfo pode ter um peso</system:String>
     <system:String x:Key="AvvisaTallone">Alertas quando o baralho termina</system:String>
     <system:String x:Key="NomeUtente">Nome de usuário</system:String>
     <system:String x:Key="NomeCpu">nome da CPU</system:String>
@@ -47,5 +47,5 @@
     <system:String x:Key="a">a</system:String>
     <system:String x:Key="piattaforma">na%20platfroma</system:String>
     <system:String x:Key="EffettuaSecondaPartita">Ele joga um segundo jogo</system:String>
-    <system:String x:Key="MossaNonConsentita">Você tem que responder à semente</system:String>
+    <system:String x:Key="MossaNonConsentita">Você tem que responder à la terno</system:String>
 </ResourceDictionary>

@@ -8,7 +8,7 @@
     <system:String x:Key="NelMazzoRimangono">Il reste</system:String>
     <system:String x:Key="carte">&#160;cartes dans le jeu</system:String>
     <system:String x:Key="IlSemeDiBriscolaE">Le costume d'atout est</system:String>
-    <system:String x:Key="BriscolaDaPunti">La Carte désignant la couleur d'atout peut marquer des points</system:String>
+    <system:String x:Key="BriscolaDaPunti">La Carte désignant l'atout peut avoir un poids</system:String>
     <system:String x:Key="AvvisaTallone">Alertes lorsque le jeu se termine</system:String>
     <system:String x:Key="NomeUtente">Nom d'utilisateur</system:String>
     <system:String x:Key="NomeCpu">Nom du processeur</system:String>
@@ -47,5 +47,5 @@
     <system:String x:Key="a">-</system:String>
     <system:String x:Key="piattaforma">sur%20la%20plateforme</system:String>
     <system:String x:Key="EffettuaSecondaPartita">Est-ce qu'il joue un deuxième jeu</system:String>
-    <system:String x:Key="MossaNonConsentita">Vous devez répondre à la graine</system:String>
+    <system:String x:Key="MossaNonConsentita">Vous devez répondre à la costume</system:String>
 </ResourceDictionary>

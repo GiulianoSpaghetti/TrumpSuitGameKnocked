@@ -1,3 +1,10 @@
+:it: il primo software per android che google ha certificato non crashare mai
+
+![Napoli-Logo](https://github.com/user-attachments/assets/485755c8-376c-4778-b9ba-80f6cb204142)
+
+![made in parco grifeo](https://github.com/user-attachments/assets/8f3e561e-6002-4dd8-bc50-888c14a1dfe3)
+
+
 Una revisitazione della briscola per dare la risposta di seme.
 É basata sul supervisore, che garantisce una corretta esecuzione delle operazioni, senza però spiare le carte.
 La IA è quella dell briscola classica, andrebbe cambiata per giocare lo stesso seme se non c'è risposta, ma non penso che lo farò.

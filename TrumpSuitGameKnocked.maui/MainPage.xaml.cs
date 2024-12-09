@@ -96,22 +96,25 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
             {
                 NelMazzoRimangono.Text = $"{App.d["NelMazzoRimangono"]} {m.GetNumeroCarte()} {App.d["carte"]}";
                 CartaBriscola.Text = $"{App.d["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";
-                if (m.GetNumeroCarte() == 0)
-                {
-                    ((Image)this.FindByName(Carta.GetCarta(e.GetCartaBriscola()).GetID())).IsVisible = false;
-                    NelMazzoRimangono.IsVisible = false;
-                    if (avvisaTalloneFinito)
-                        snack += $"{App.d["IlTalloneEFinito"]}\n";
+		switch (m.GetNumeroCarte()) 
+		{
+			case 2: if (avvisaTalloneFinito)
+                        		snack = $"{App.d["IlTalloneEFinito"]}\r\n";
+                        break;
+                        case 0: ((Image)this.FindByName(Carta.GetCarta(e.GetCartaBriscola()).GetID())).IsVisible = false;
+                    		NelMazzoRimangono.IsVisible = false;
+                	break;
                 }
                 for (UInt16 i = 0; i < g.GetNumeroCarte(); i++)
                 {
                     VisualizzaImmagine(g.GetID(i), 1, i, true);
                     ((Image)this.FindByName("Cpu" + i)).IsVisible = true;
                 }
-                if (cpu.GetNumeroCarte() == 2)
-                    Cpu2.IsVisible = false;
-                if (cpu.GetNumeroCarte() == 1)
-                    Cpu1.IsVisible = false;
+                switch (cpu.GetNumeroCarte())
+                {
+                    case 2: Cpu2.IsVisible = false; break;
+                    case 1: Cpu1.IsVisible = false; break;
+                }
 
                 if (primo == cpu)
                 {
@@ -121,7 +124,7 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
                     else if (cpu.GetCartaGiocata().GetPunteggio() > 0)
                         snack += $"{App.d["LaCpuHaGiocatoIl"]} {cpu.GetCartaGiocata().GetValore() + 1} {App.d["di"]} {cpu.GetCartaGiocata().GetSemeStr()}\n";
                     if (snack != "")
-                        AvvisoAsync(snack);
+                        Snackbar.Make(snack.Trim()).Show(App.cancellationTokenSource.Token);
                 }
 
             }
@@ -140,7 +143,7 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
                 }
                 if (numeroPartite == UInt128.MaxValue)
                 {
-                    AvvisoAsync("Non hai giocato abbastanza per oggi?");
+                    Snackbar.Make("Non hai giocato abbastanza per oggi?").Show(App.cancellationTokenSource.Token);
                     Application.Current.Quit();
                 }
                 else
@@ -182,12 +185,13 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
             g.Gioca(quale, primo, true);
         VisualizzaImmagine(g.GetID(quale), 2, 0, false);
     }
+
     private void NuovaPartita()
     {
         Image img;
         UInt16 level = (UInt16)Preferences.Get("livello", 3);
         if (level != helper.GetLivello()) {
-            AvvisoAsync($"{App.d["NuovaPartitaPerLivello"]}");
+            Snackbar.Make($"{App.d["NuovaPartitaPerLivello"]}").Show(App.cancellationTokenSource.Token);
             numeroPartite = 0;
         }
         e = new ElaboratoreCarteBriscola(briscolaDaPunti);
@@ -279,7 +283,7 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
         }
         catch (Exception ex)
         {
-            AvvisoAsync(App.d["MossaNonConsentita"] as string);
+            Snackbar.Make(App.d["MossaNonConsentita"] as string).Show(App.cancellationTokenSource.Token);
             return;
         }
         t.Start();
@@ -287,10 +291,6 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
             GiocaCpu();
     }
 
-    private  async void AvvisoAsync(string s)
-    {
-        await Snackbar.Make(s).Show(App.cancellationTokenSource.Token);
-    }
     public void AggiornaOpzioni()
     {
         UInt16 level = (UInt16)Preferences.Get("livello", 3);
@@ -309,7 +309,7 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
     {
         if (numeroPartite > UInt128.MaxValue - 2)
         {
-            AvvisoAsync("Non hai giocato abbastanza per oggi?");
+            Snackbar.Make("Non hai giocato abbastanza per oggi?").Show(App.cancellationTokenSource.Token);
             Application.Current.Quit();
         }
         else

@@ -1,5 +1,8 @@
 :it: il primo software per android che google ha certificato non crashare mai
 
+Questo gioco dimostra che la teoria dei giochi è vera: l'algorimo brevettato funziona su tutti i giochi di carte senza piatto.
+
+
 ![Napoli-Logo](https://github.com/user-attachments/assets/485755c8-376c-4778-b9ba-80f6cb204142)
 
 ![made in parco grifeo](https://github.com/user-attachments/assets/8f3e561e-6002-4dd8-bc50-888c14a1dfe3)

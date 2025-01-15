@@ -17,3 +17,7 @@ La IA è quella dell briscola classica, andrebbe cambiata per giocare lo stesso 
 ## Su Android
 
 [![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=org.altervista.numerone.trumpsuitgameknocked)
+
+## Aggiornamenti
+
+Per windows i package msix sono platform indepedent ed in IL, per cui è sufficiente scaricarsi il nuovo dotnet framework runtime e reinstallarsi il pacchetto per ottenere il codice binario ottimizzato con le ultime patch.

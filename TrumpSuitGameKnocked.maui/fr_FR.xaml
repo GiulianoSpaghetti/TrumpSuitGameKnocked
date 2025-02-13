@@ -22,7 +22,7 @@
     <system:String x:Key="per">par</system:String>
     <system:String x:Key="punti">points</system:String>
     <system:String x:Key="PartitaFinita">Le match est terminé</system:String>
-    <system:String x:Key="EffettuaNuovaPartita">Voulez-vous commencer un nouveau jeu</system:String>
+    <system:String x:Key="EffettuaNuovaPartita">Voulez-vous commencer un nouveau jeu?</system:String>
     <system:String x:Key="ValoreNonValido">rvalue invalide</system:String>
     <system:String x:Key="No">No</system:String>
     <system:String x:Key="Condividi">Partager</system:String>
@@ -46,6 +46,6 @@
     <system:String x:Key="efinito">ça%20a%20fini</system:String>
     <system:String x:Key="a">-</system:String>
     <system:String x:Key="piattaforma">sur%20la%20plateforme</system:String>
-    <system:String x:Key="EffettuaSecondaPartita">Est-ce qu'il joue un deuxième jeu</system:String>
+    <system:String x:Key="EffettuaSecondaPartita">Est-ce qu'il joue un deuxième jeu?</system:String>
     <system:String x:Key="MossaNonConsentita">Vous devez répondre à la costume</system:String>
 </ResourceDictionary>

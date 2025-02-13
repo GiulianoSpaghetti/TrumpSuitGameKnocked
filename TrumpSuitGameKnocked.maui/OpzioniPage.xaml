@@ -50,10 +50,10 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-            <CheckBox x:Name="cbCartaBriscola" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" IsChecked="True" />
-            <Label x:Name="lbCartaBriscola" Grid.Row="5" Grid.Column="1" Text="" />
-            <CheckBox x:Name="cbAvvisaTallone" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" IsChecked="True" />
-            <Label x:Name="lbAvvisaTallone" Grid.Row="6" Grid.Column="1" Text="" />
+            <Switch x:Name="swCartaBriscola" Grid.Row="5" Grid.Column="1" />
+            <Label x:Name="lbCartaBriscola" Grid.Row="5" Grid.Column="0" Text="" Grid.ColumnSpan="2" />
+            <Switch x:Name="swAvvisaTallone" Grid.Row="6" Grid.Column="1" />
+            <Label x:Name="lbAvvisaTallone" Grid.Row="6" Grid.Column="0" Text="" Grid.ColumnSpan="2" />
             <Button x:Name="btnOk" Text="" Clicked="OnOk_Click"  Grid.Row="7" Grid.Column="1" />
         </Grid>
     </ContentPage.Content>

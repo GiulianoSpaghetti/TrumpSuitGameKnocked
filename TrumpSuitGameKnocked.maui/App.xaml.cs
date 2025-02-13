@@ -23,11 +23,17 @@ public partial class App : Application
         piattaforma = DeviceInfo.Current.Model;
         if (piattaforma == "System Product Name")
             piattaforma = "Windows " + DeviceInfo.Current.VersionString;
+    }
 
 #if ANDROID
-        MainPage = new AppShell();
-#else
-        MainPage = new AppShellWindows();
-#endif
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            return new Window(new AppShell());
+        }
+#else        
+    protected override Window CreateWindow(IActivationState? activationState)
+    {
+        return new Window(new AppShellWindows());
     }
+#endif
 }

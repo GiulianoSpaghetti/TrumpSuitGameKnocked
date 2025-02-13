@@ -5,10 +5,10 @@
              x:Class="TrumpSuitGameKnocked.maui.en_US">
     <system:String x:Key="PuntiDiPrefisso">&#160;</system:String>
     <system:String x:Key="PuntiDiSuffisso">&#160;points</system:String>
-    <system:String x:Key="NelMazzoRimangono">There are</system:String>
-    <system:String x:Key="carte">left cards in the deck</system:String>
-    <system:String x:Key="IlSemeDiBriscolaE">The trump seed is</system:String>
-    <system:String x:Key="BriscolaDaPunti">The card deisgnating the trump seed can have a weight</system:String>
+    <system:String x:Key="NelMazzoRimangono">There are still</system:String>
+    <system:String x:Key="carte">cards in the deck</system:String>
+    <system:String x:Key="IlSemeDiBriscolaE">The trump suit is</system:String>
+    <system:String x:Key="BriscolaDaPunti">The card deisgnating the trump suit can have a weight</system:String>
     <system:String x:Key="AvvisaTallone">Alert when the deck ends</system:String>
     <system:String x:Key="NomeUtente">User name</system:String>
     <system:String x:Key="NomeCpu">CPU name</system:String>
@@ -38,7 +38,7 @@
     <system:String x:Key="File">File</system:String>
     <system:String x:Key="Info">?</system:String>
     <system:String x:Key="IlLivelloE">The level is</system:String>
-    <system:String x:Key="NuovaPartitaPerLivello">The level has changed, a new game will be started</system:String>
+    <system:String x:Key="NuovaPartitaPerLivello">The level has changed, a new gamsuitsuite will be started</system:String>
     <system:String x:Key="Salva">Save</system:String>
     <system:String x:Key="NuovaPartita">New Game</system:String>
     <system:String x:Key="ColGioco">With%20the%20Trump%20Suit%20Game%20Knocked%20the%20match%20number</system:String>
@@ -46,6 +46,6 @@
     <system:String x:Key="efinito">is%20finished</system:String>
     <system:String x:Key="a">at</system:String>
     <system:String x:Key="piattaforma">on%20platform</system:String>
-    <system:String x:Key="EffettuaSecondaPartita">Do you want to play the second game</system:String>
+    <system:String x:Key="EffettuaSecondaPartita">Do you want to play the second game?</system:String>
     <system:String x:Key="MossaNonConsentita">You have to respond to the suit</system:String>
 </ResourceDictionary>

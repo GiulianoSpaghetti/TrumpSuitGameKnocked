@@ -35,7 +35,7 @@ public partial class GreetingsPage : ContentPage
         {
             s1 = App.d["EffettuaSecondaPartita"] as string;
         }
-        fpRisultrato.Text = $"{App.d["PartitaFinita"]}. {s}. {s1}?";
+        fpRisultrato.Text = $"{App.d["PartitaFinita"]}. {s}. {s1}";
         btnNo.Text = $"{App.d["No"]}";
         btnShare.Text = $"{App.d["Condividi"]}";
         btnShare.IsEnabled = helper.GetLivello() == 3;

@@ -22,7 +22,7 @@
     <system:String x:Key="per">per</system:String>
     <system:String x:Key="punti">punti</system:String>
     <system:String x:Key="PartitaFinita">Partita finita</system:String>
-    <system:String x:Key="EffettuaNuovaPartita">Vuoi effettuare una nuova giocata</system:String>
+    <system:String x:Key="EffettuaNuovaPartita">Vuoi effettuare una nuova partita?</system:String>
     <system:String x:Key="ValoreNonValido">Valore non valido</system:String>
     <system:String x:Key="No">No</system:String>
     <system:String x:Key="Condividi">Condividi</system:String>
@@ -46,6 +46,6 @@
     <system:String x:Key="efinito">è%20finita</system:String>
     <system:String x:Key="a">a</system:String>
     <system:String x:Key="piattaforma">su%20piattaforma</system:String>
-    <system:String x:Key="EffettuaSecondaPartita">Vuoi effettuare la seconda mano</system:String>
+    <system:String x:Key="EffettuaSecondaPartita">Vuoi effettuare la seconda mano?</system:String>
     <system:String x:Key="MossaNonConsentita">Devi rispondere al seme</system:String>
 </ResourceDictionary>

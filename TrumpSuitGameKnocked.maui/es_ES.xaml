@@ -8,7 +8,7 @@
     <system:String x:Key="NelMazzoRimangono">Quedan&#160;</system:String>
     <system:String x:Key="carte">&#160;trajetas en la baraja</system:String>
     <system:String x:Key="IlSemeDiBriscolaE">El palo de triunfo es</system:String>
-    <system:String x:Key="BriscolaDaPunti">La tarjeta que designa el palo de triunfo puede tener un peso</system:String>
+    <system:String x:Key="BriscolaDaPunti">La tarjeta que designa el triunfo puede tener un peso</system:String>
     <system:String x:Key="AvvisaTallone">Alertas cuando termina el mazo</system:String>
     <system:String x:Key="NomeUtente">Nombre de usuario</system:String>
     <system:String x:Key="NomeCpu">Nombre de la CPU</system:String>
@@ -22,7 +22,7 @@
     <system:String x:Key="per">por</system:String>
     <system:String x:Key="punti">puntos</system:String>
     <system:String x:Key="PartitaFinita">El partido ha terminado</system:String>
-    <system:String x:Key="EffettuaNuovaPartita">¿Quieres empezar un nuevo juego</system:String>
+    <system:String x:Key="EffettuaNuovaPartita">¿Quieres empezar un nuevo juego?</system:String>
     <system:String x:Key="ValoreNonValido">Valor no válido</system:String>
     <system:String x:Key="No">No</system:String>
     <system:String x:Key="Condividi">Compartir</system:String>
@@ -46,6 +46,6 @@
     <system:String x:Key="efinito">està%20terminado</system:String>
     <system:String x:Key="a">a</system:String>
     <system:String x:Key="piattaforma">en%20plataforma</system:String>
-    <system:String x:Key="EffettuaSecondaPartita">¿Hace un segundo juego</system:String>
+    <system:String x:Key="EffettuaSecondaPartita">¿Hace un segundo juego?</system:String>
     <system:String x:Key="MossaNonConsentita">Tienes que responder a la traje</system:String>
 </ResourceDictionary>

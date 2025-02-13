@@ -8,12 +8,12 @@
     IgnorableNamespaces="uap rescap com desktop">
 
 
-	<Identity Name="maui-package-name-placeholder" Publisher="CN=Giulio Sorrentino" Version="0.9.5.0" />
+	<Identity Name="maui-package-name-placeholder" Publisher="CN=Giulio Sorrentino, O=numeronesoft, C=IT" Version="0.9.6.0" />
 
 
   <Properties>
     <DisplayName>$placeholder$</DisplayName>
-    <PublisherDisplayName>User Name</PublisherDisplayName>
+    <PublisherDisplayName>Giulio Sorrentino</PublisherDisplayName>
     <Logo>$placeholder$.png</Logo>
   </Properties>
 

@@ -46,6 +46,6 @@
     <system:String x:Key="efinito">beendet</system:String>
     <system:String x:Key="a">zu</system:String>
     <system:String x:Key="piattaforma">auf%20der%20Plattform</system:String>
-    <system:String x:Key="EffettuaSecondaPartita">Spielt er ein zweites Spiel</system:String>
+    <system:String x:Key="EffettuaSecondaPartita">Spielt er ein zweites Spiel?</system:String>
     <system:String x:Key="MossaNonConsentita">Sie müssen auf den Anzung reagieren</system:String>
 </ResourceDictionary>

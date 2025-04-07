@@ -17,8 +17,8 @@ public partial class GreetingsPage : ContentPage
         cpu= cp;
         m = mazzo;
         partite = NumeroPartite;
-        puntiUtente = (UInt16) (vecchiPuntiUtente+g.GetPunteggio());
-        puntiCpu = (UInt16) (vecchiPuntiCpu + cpu.GetPunteggio());
+        puntiUtente = (UInt16) (vecchiPuntiUtente+g.Punteggio);
+        puntiCpu = (UInt16) (vecchiPuntiCpu + cpu.Punteggio);
         if (puntiUtente == puntiCpu)
             s = $"{App.d["PartitaPatta"]}";
         else
@@ -46,7 +46,7 @@ public partial class GreetingsPage : ContentPage
 
     private async void OnFPShare_Click(object sender, EventArgs e)
     {
-        await Launcher.Default.OpenAsync(new Uri($"https://twitter.com/intent/tweet?text={App.d["ColGioco"]}%20{partite+1}%20{g.GetNome()}%20{App.d["contro"]}%20{cpu.GetNome()}%20{App.d["efinito"]}%20{puntiUtente}%20{App.d["a"]}%20{puntiCpu}%20{App.d["piattaforma"]}%20{App.piattaforma}&url=https%3A%2F%2Fgithub.com%2Fnumerunix%2FTrumpSuitGameKnocked.maui"));
+        await Launcher.Default.OpenAsync(new Uri($"https://twitter.com/intent/tweet?text={App.d["ColGioco"]}%20{partite+1}%20{g.Nome}%20{App.d["contro"]}%20{cpu.Nome}%20{App.d["efinito"]}%20{puntiUtente}%20{App.d["a"]}%20{puntiCpu}%20{App.d["piattaforma"]}%20{App.piattaforma}&url=https%3A%2F%2Fgithub.com%2Fnumerunix%2FTrumpSuitGameKnocked.maui"));
         btnShare.IsEnabled = false;
     }
 

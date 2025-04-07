@@ -27,8 +27,8 @@
 		<ApplicationId>org.altervista.numerone.trumpsuitgameknocked</ApplicationId>
 
 		<!-- Versions -->
-		<ApplicationDisplayVersion>0.9.6</ApplicationDisplayVersion>
-		<ApplicationVersion>38</ApplicationVersion>
+		<ApplicationDisplayVersion>0.9.7</ApplicationDisplayVersion>
+		<ApplicationVersion>41</ApplicationVersion>
 
 		<!-- To develop, package, and publish an app to the Microsoft Store, see: https://aka.ms/MauiTemplateUnpackaged -->
 		<WindowsPackageType>MSIX</WindowsPackageType>
@@ -41,13 +41,13 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 		<GenerateAppInstallerFile>True</GenerateAppInstallerFile>
 		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
-		<PackageCertificateThumbprint>40C6835897D2CEE8B8852D859567E560DB773182</PackageCertificateThumbprint>
+		<PackageCertificateThumbprint>53139CCE245FC089760A02023E43B7EBAB093510</PackageCertificateThumbprint>
 		<AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
 		<AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
 		<AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
 		<GenerateTestArtifacts>True</GenerateTestArtifacts>
 		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-		<AppInstallerUri>https://github.com/GiulianoSpaghetti/TrumpSuitGameKnocked.maui/releases/download/0.9.5/TrumpSuitGameKnocked.maui_x64.msix</AppInstallerUri>
+		<AppInstallerUri>https://github.com/GiulianoSpaghetti/TrumpSuitGameKnocked.maui/releases/download/0.9.5/TrumpSuitGameKnocked_arm64.msix</AppInstallerUri>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -68,22 +68,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui" Version="11.0.0" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.40" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.2" />
-		<PackageReference Include="CardFramework.Maui" Version="1.4.8" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.2" />
-
+		<PackageReference Include="CommunityToolkit.Maui" Version="11.2.0" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.50" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.3" />
+		<PackageReference Include="CardFramework.Maui" Version="1.5.3" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.3" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android35.0'">
-		<PackageReference Include="GoogleGson" Version="2.11.0.5" />
+		<PackageReference Include="GoogleGson" Version="2.12.1" />
 		<PackageReference Include="Xamarin.Android.Glide" Version="4.16.0.11" />
 		<PackageReference Include="Xamarin.Android.Glide.Annotations" Version="4.16.0.11" />
 		<PackageReference Include="Xamarin.Android.Glide.DiskLruCache" Version="4.16.0.11" />
 		<PackageReference Include="Xamarin.Android.Glide.GifDecoder" Version="4.16.0.11" />
-		<PackageReference Include="Xamarin.AndroidX.Activity" Version="1.10.0" />
-		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.10.0" />
+		<PackageReference Include="Xamarin.AndroidX.Activity" Version="1.10.1" />
+		<PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.10.1" />
 		<PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.2" />
 		<PackageReference Include="Xamarin.AndroidX.Annotation.Experimental" Version="1.4.1.8" />
 		<PackageReference Include="Xamarin.AndroidX.Annotation.Jvm" Version="1.9.1.2" />
@@ -97,9 +96,9 @@
 		<PackageReference Include="Xamarin.AndroidX.Collection.Jvm" Version="1.4.5.2" />
 		<PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.4.5.2" />
 		<PackageReference Include="Xamarin.AndroidX.Concurrent.Futures" Version="1.2.0.5" />
-		<PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.2.0.2" />
-		<PackageReference Include="Xamarin.AndroidX.ConstraintLayout.Core" Version="1.1.0.2" />
-		<PackageReference Include="Xamarin.AndroidX.CoordinatorLayout" Version="1.2.0.19" />
+		<PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.2.1" />
+		<PackageReference Include="Xamarin.AndroidX.ConstraintLayout.Core" Version="1.1.1" />
+		<PackageReference Include="Xamarin.AndroidX.CoordinatorLayout" Version="1.3.0" />
 		<PackageReference Include="Xamarin.AndroidX.Core" Version="1.15.0.2" />
 		<PackageReference Include="Xamarin.AndroidX.Core.Core.Ktx" Version="1.15.0.2" />
 		<PackageReference Include="Xamarin.AndroidX.CursorAdapter" Version="1.0.0.31" />
@@ -110,9 +109,9 @@
 		<PackageReference Include="Xamarin.AndroidX.DynamicAnimation" Version="1.0.0.31" />
 		<PackageReference Include="Xamarin.AndroidX.Emoji2" Version="1.5.0.3" />
 		<PackageReference Include="Xamarin.AndroidX.Emoji2.ViewsHelper" Version="1.5.0.3" />
-		<PackageReference Include="Xamarin.AndroidX.ExifInterface" Version="1.3.7.9" />
-		<PackageReference Include="Xamarin.AndroidX.Fragment" Version="1.8.5.2" />
-		<PackageReference Include="Xamarin.AndroidX.Fragment.Ktx" Version="1.8.5.2" />
+		<PackageReference Include="Xamarin.AndroidX.ExifInterface" Version="1.4.0" />
+		<PackageReference Include="Xamarin.AndroidX.Fragment" Version="1.8.6" />
+		<PackageReference Include="Xamarin.AndroidX.Fragment.Ktx" Version="1.8.6" />
 		<PackageReference Include="Xamarin.AndroidX.Interpolator" Version="1.0.0.31" />
 		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0.31" />
 		<PackageReference Include="Xamarin.AndroidX.Lifecycle.Common" Version="2.8.7.2" />
@@ -131,10 +130,10 @@
 		<PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModelSavedState" Version="2.8.7.2" />
 		<PackageReference Include="Xamarin.AndroidX.Loader" Version="1.1.0.31" />
 		<PackageReference Include="Xamarin.AndroidX.LocalBroadcastManager" Version="1.1.0.19" />
-		<PackageReference Include="Xamarin.AndroidX.Navigation.Common" Version="2.8.5.1" />
-		<PackageReference Include="Xamarin.AndroidX.Navigation.Fragment" Version="2.8.5.1" />
-		<PackageReference Include="Xamarin.AndroidX.Navigation.Runtime" Version="2.8.5.1" />
-		<PackageReference Include="Xamarin.AndroidX.Navigation.UI" Version="2.8.5.1" />
+		<PackageReference Include="Xamarin.AndroidX.Navigation.Common" Version="2.8.8" />
+		<PackageReference Include="Xamarin.AndroidX.Navigation.Fragment" Version="2.8.8" />
+		<PackageReference Include="Xamarin.AndroidX.Navigation.Runtime" Version="2.8.8" />
+		<PackageReference Include="Xamarin.AndroidX.Navigation.UI" Version="2.8.8" />
 		<PackageReference Include="Xamarin.AndroidX.Print" Version="1.0.0.31" />
 		<PackageReference Include="Xamarin.AndroidX.ProfileInstaller.ProfileInstaller" Version="1.4.1.2" />
 		<PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.4.0" />
@@ -148,7 +147,7 @@
 		<PackageReference Include="Xamarin.AndroidX.Transition" Version="1.5.1.4" />
 		<PackageReference Include="Xamarin.AndroidX.VectorDrawable" Version="1.2.0.5" />
 		<PackageReference Include="Xamarin.AndroidX.VectorDrawable.Animated" Version="1.2.0.5" />
-		<PackageReference Include="Xamarin.AndroidX.VersionedParcelable" Version="1.2.0.9" />
+		<PackageReference Include="Xamarin.AndroidX.VersionedParcelable" Version="1.2.1" />
 		<PackageReference Include="Xamarin.AndroidX.ViewPager" Version="1.1.0.1" />
 		<PackageReference Include="Xamarin.AndroidX.ViewPager2" Version="1.1.0.5" />
 		<PackageReference Include="Xamarin.AndroidX.Window" Version="1.3.0.5" />
@@ -158,7 +157,7 @@
 		<PackageReference Include="Xamarin.Google.Crypto.Tink.Android" Version="1.16.0.1" />
 		<PackageReference Include="Xamarin.Google.ErrorProne.Annotations" Version="2.36.0.1" />
 		<PackageReference Include="Xamarin.Google.Guava.ListenableFuture" Version="1.0.0.26" />
-		<PackageReference Include="Xamarin.Jetbrains.Annotations" Version="26.0.1.2" />
+		<PackageReference Include="Xamarin.Jetbrains.Annotations" Version="26.0.2" />
 		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.0.21.2" />
 		<PackageReference Include="Xamarin.Kotlin.StdLib.Common" Version="2.0.21.2" />
 		<PackageReference Include="Xamarin.KotlinX.AtomicFU" Version="0.26.1.1" />
@@ -166,8 +165,8 @@
 		<PackageReference Include="Xamarin.KotlinX.Coroutines.Android" Version="1.9.0.2" />
 		<PackageReference Include="Xamarin.KotlinX.Coroutines.Core" Version="1.9.0.2" />
 		<PackageReference Include="Xamarin.KotlinX.Coroutines.Core.Jvm" Version="1.9.0.2" />
-		<PackageReference Include="Xamarin.KotlinX.Serialization.Core " Version="1.7.3.2" />
-		<PackageReference Include="Xamarin.KotlinX.Serialization.Core.Jvm" Version="1.7.3.2" />
+		<PackageReference Include="Xamarin.KotlinX.Serialization.Core " Version="1.7.3.3" />
+		<PackageReference Include="Xamarin.KotlinX.Serialization.Core.Jvm" Version="1.7.3.3" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-ios'">
@@ -178,9 +177,9 @@
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-windows10.0.26100.0'">
 		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.3.2" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.2" />
-		<PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3065.39" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.3" />
 		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1742" />
-		<PackageReference Include="System.Speech" Version="9.0.2" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.7.250310001" />
+		<PackageReference Include="System.Speech" Version="9.0.3" />
 	</ItemGroup>
 </Project>

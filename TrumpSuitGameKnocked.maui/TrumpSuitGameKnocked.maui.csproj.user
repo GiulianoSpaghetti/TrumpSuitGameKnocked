@@ -8,7 +8,7 @@
     <DefaultDevice>pixel_7_-_api_35</DefaultDevice>
     <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
     <AppxShowAllApps>False</AppxShowAllApps>
-    <_LastSelectedProfileId>MSIX-win10-x64.pubxml</_LastSelectedProfileId>
+    <_LastSelectedProfileId>MSIX-win10-arm64.pubxml</_LastSelectedProfileId>
     <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetPlatformIdentifier)'=='iOS'">

@@ -26,20 +26,20 @@ public partial class MainPage : ContentPage
         secondi = (UInt16)Preferences.Get("secondi", 5);
         e = new ElaboratoreCarteBriscola(briscolaDaPunti);
         m = new Mazzo(e);
-        Carta.Inizializza(40, new org.altervista.numerone.framework.briscola.CartaHelper(e.GetCartaBriscola()),
+        Carta.Inizializza(40, new org.altervista.numerone.framework.briscola.CartaHelper(e.CartaBriscola),
 App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string, App.d["spade"] as string
 );
         g = new Giocatore(new GiocatoreHelperUtente(), Preferences.Get("nomeUtente", "numerone"), 3);
         switch (Preferences.Get("livello", 3))
         {
-            case 1: helper = new GiocatoreHelperCpu0(e.GetCartaBriscola()); break;
-            case 2: helper = new GiocatoreHelperCpu1(e.GetCartaBriscola()); break;
-            default: helper = new GiocatoreHelperCpu2(e.GetCartaBriscola()); break;
+            case 1: helper = new GiocatoreHelperCpu0(e.CartaBriscola); break;
+            case 2: helper = new GiocatoreHelperCpu1(e.CartaBriscola); break;
+            default: helper = new GiocatoreHelperCpu2(e.CartaBriscola); break;
         }
         cpu = new Giocatore(helper, Preferences.Get("nomeCpu", "numerona"), 3);
         primo = g;
         secondo = cpu;
-        briscola = Carta.GetCarta(e.GetCartaBriscola());
+        briscola = Carta.GetCarta(e.CartaBriscola);
         gesture = new TapGestureRecognizer();
         gesture.Tapped += Image_Tapped;
         for (UInt16 i = 0; i < 3; i++)
@@ -52,12 +52,12 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
         VisualizzaImmagine(g.GetID(1), 1, 1, true);
         VisualizzaImmagine(g.GetID(2), 1, 2, true);
 
-        NomeUtente.Text = g.GetNome();
-        NomeCpu.Text = cpu.GetNome();
-        PuntiCpu.Text = $"{App.d["PuntiDiPrefisso"]} {cpu.GetNome()} {App.d["PuntiDiSuffisso"]}: {cpu.GetPunteggio()}";
-        PuntiUtente.Text = $"{App.d["PuntiDiPrefisso"]} {g.GetNome()} {App.d["PuntiDiSuffisso"]}: {g.GetPunteggio()}";
+        NomeUtente.Text = g.Nome;
+        NomeCpu.Text = cpu.Nome;
+        PuntiCpu.Text = $"{App.d["PuntiDiPrefisso"]} {cpu.Nome} {App.d["PuntiDiSuffisso"]}: {cpu.Punteggio}";
+        PuntiUtente.Text = $"{App.d["PuntiDiPrefisso"]} {g.Nome} {App.d["PuntiDiSuffisso"]}: {g.Punteggio}";
         NelMazzoRimangono.Text = $"{App.d["NelMazzoRimangono"]} {m.GetNumeroCarte()} {App.d["carte"]}"; 
-        CartaBriscola.Text = $"{App.d["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";
+        CartaBriscola.Text = $"{App.d["IlSemeDiBriscolaE"]}: {briscola.SemeStr}";
         Level.Text = $"{App.d["IlLivelloE"]}: {helper.GetLivello()}";
         Archivio.Text = $"{App.d["File"]}";
         Info.Text = $"{App.d["Info"]}";
@@ -65,7 +65,7 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
         OpzioniMenu.Text = $"{App.d["Opzioni"]}";
         EsciMenu.Text = $"{App.d["Esci"]}";
         InfoMenu.Text = $"{App.d["Informazioni"]}";
-        VisualizzaImmagine(Carta.GetCarta(e.GetCartaBriscola()).GetID(), 4, 4, false);
+        VisualizzaImmagine(Carta.GetCarta(e.CartaBriscola).Id, 4, 4, false);
 
         t = Dispatcher.CreateTimer();
         t.Interval = TimeSpan.FromSeconds(secondi);
@@ -74,14 +74,14 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
             string snack = "";
             if (aggiornaNomi)
             {
-                NomeUtente.Text = g.GetNome();
-                NomeCpu.Text = cpu.GetNome();
+                NomeUtente.Text = g.Nome;
+                NomeCpu.Text = cpu.Nome;
                 aggiornaNomi = false;
             }
-            c = primo.GetCartaGiocata();
-            c1 = secondo.GetCartaGiocata();
-            ((Image)this.FindByName(c.GetID())).IsVisible = false;
-            ((Image)this.FindByName(c1.GetID())).IsVisible = false;
+            c = primo.CartaGiocata;
+            c1 = secondo.CartaGiocata;
+            ((Image)this.FindByName(c.Id)).IsVisible = false;
+            ((Image)this.FindByName(c1.Id)).IsVisible = false;
             if ((c.CompareTo(c1) > 0 && c.StessoSeme(c1)) || (c1.StessoSeme(briscola) && !c.StessoSeme(briscola)))
             {
                 temp = secondo;
@@ -90,27 +90,27 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
             }
 
             primo.AggiornaPunteggio(secondo);
-            PuntiCpu.Text = $"{App.d["PuntiDiPrefisso"]} {cpu.GetNome()} {App.d["PuntiDiSuffisso"]}: {cpu.GetPunteggio()}";
-            PuntiUtente.Text = $"{App.d["PuntiDiPrefisso"]} {g.GetNome()} {App.d["PuntiDiSuffisso"]}: {g.GetPunteggio()}";
+            PuntiCpu.Text = $"{App.d["PuntiDiPrefisso"]} {cpu.Nome} {App.d["PuntiDiSuffisso"]}: {cpu.Punteggio}";
+            PuntiUtente.Text = $"{App.d["PuntiDiPrefisso"]} {g.Nome} {App.d["PuntiDiSuffisso"]}: {g.Punteggio}";
             if (AggiungiCarte())
             {
                 NelMazzoRimangono.Text = $"{App.d["NelMazzoRimangono"]} {m.GetNumeroCarte()} {App.d["carte"]}";
-                CartaBriscola.Text = $"{App.d["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";
+                CartaBriscola.Text = $"{App.d["IlSemeDiBriscolaE"]}: {briscola.SemeStr}";
 		switch (m.GetNumeroCarte()) 
 		{
 			case 2: if (avvisaTalloneFinito)
                         		snack = $"{App.d["IlTalloneEFinito"]}\r\n";
                         break;
-                        case 0: ((Image)this.FindByName(Carta.GetCarta(e.GetCartaBriscola()).GetID())).IsVisible = false;
+                        case 0: ((Image)this.FindByName(Carta.GetCarta(e.CartaBriscola).Id)).IsVisible = false;
                     		NelMazzoRimangono.IsVisible = false;
                 	break;
                 }
-                for (UInt16 i = 0; i < g.GetNumeroCarte(); i++)
+                for (UInt16 i = 0; i < g.NumeroCarte; i++)
                 {
                     VisualizzaImmagine(g.GetID(i), 1, i, true);
                     ((Image)this.FindByName("Cpu" + i)).IsVisible = true;
                 }
-                switch (cpu.GetNumeroCarte())
+                switch (cpu.NumeroCarte)
                 {
                     case 2: Cpu2.IsVisible = false; break;
                     case 1: Cpu1.IsVisible = false; break;
@@ -119,10 +119,10 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
                 if (primo == cpu)
                 {
                     GiocaCpu();
-                    if (cpu.GetCartaGiocata().StessoSeme(briscola))
-                        snack += $"{App.d["LaCpuHaGiocatoIl"]} {cpu.GetCartaGiocata().GetValore() + 1} {App.d["Briscola"]}\n";
-                    else if (cpu.GetCartaGiocata().GetPunteggio() > 0)
-                        snack += $"{App.d["LaCpuHaGiocatoIl"]} {cpu.GetCartaGiocata().GetValore() + 1} {App.d["di"]} {cpu.GetCartaGiocata().GetSemeStr()}\n";
+                    if (cpu.CartaGiocata.StessoSeme(briscola))
+                        snack += $"{App.d["LaCpuHaGiocatoIl"]} {cpu.CartaGiocata.Valore + 1} {App.d["Briscola"]}\n";
+                    else if (cpu.CartaGiocata.Punteggio > 0)
+                        snack += $"{App.d["LaCpuHaGiocatoIl"]} {cpu.CartaGiocata.Valore + 1} {App.d["di"]} {cpu.CartaGiocata.SemeStr}\n";
                     if (snack != "")
                         Snackbar.Make(snack.Trim()).Show(App.cancellationTokenSource.Token);
                 }
@@ -138,8 +138,8 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
                 }
                 else
                 {
-                    vecchiPuntiUtente = g.GetPunteggio();
-                    vecchiPuntiCPU = cpu.GetPunteggio();
+                    vecchiPuntiUtente = g.Punteggio;
+                    vecchiPuntiCPU = cpu.Punteggio;
                 }
                 if (numeroPartite == UInt128.MaxValue)
                 {
@@ -173,7 +173,7 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
     {
         UInt16 quale = 0;
         Image img1;
-        for (UInt16 i = 1; i < g.GetNumeroCarte(); i++)
+        for (UInt16 i = 1; i < g.NumeroCarte; i++)
         {
             img1 = (Image)this.FindByName(g.GetID(i));
             if (img.Id == img1.Id)
@@ -196,19 +196,19 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
         }
         e = new ElaboratoreCarteBriscola(briscolaDaPunti);
         m = new Mazzo(e);
-        Carta.SetHelper(new org.altervista.numerone.framework.briscola.CartaHelper(e.GetCartaBriscola()));
-        briscola = Carta.GetCarta(e.GetCartaBriscola());
-        g = new Giocatore(new GiocatoreHelperUtente(), g.GetNome(), 3);
+        Carta.SetHelper(new org.altervista.numerone.framework.briscola.CartaHelper(e.CartaBriscola), m);
+        briscola = Carta.GetCarta(e.CartaBriscola);
+        g = new Giocatore(new GiocatoreHelperUtente(), g.Nome, 3);
         switch (level)
         {
-            case 1: helper = new GiocatoreHelperCpu0(e.GetCartaBriscola()); break;
-            case 2: helper = new GiocatoreHelperCpu1(e.GetCartaBriscola()); break;
-            default: helper = new GiocatoreHelperCpu2(e.GetCartaBriscola()); break;
+            case 1: helper = new GiocatoreHelperCpu0(e.CartaBriscola); break;
+            case 2: helper = new GiocatoreHelperCpu1(e.CartaBriscola); break;
+            default: helper = new GiocatoreHelperCpu2(e.CartaBriscola); break;
         }
-        cpu = new Giocatore(helper, cpu.GetNome(), 3);
+        cpu = new Giocatore(helper, cpu.Nome, 3);
         for (UInt16 i = 0; i < 40; i++)
         {
-            img = (Image)this.FindByName(Carta.GetCarta(i).GetID());
+            img = (Image)this.FindByName(Carta.GetCarta(i).Id);
             img.IsVisible = false;
         }
         for (UInt16 i = 0; i < 3; i++)
@@ -224,10 +224,10 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
         Cpu1.IsVisible = true;
         Cpu2.IsVisible = true;
 
-        PuntiCpu.Text = $"{App.d["PuntiDiPrefisso"]} {cpu.GetNome()}  {App.d["PuntiDiSuffisso"]}: {cpu.GetPunteggio()}";
-        PuntiUtente.Text = $"{App.d["PuntiDiPrefisso"]} {g.GetNome()} {App.d["PuntiDiSuffisso"]}: {g.GetPunteggio()}";
+        PuntiCpu.Text = $"{App.d["PuntiDiPrefisso"]} {cpu.Nome}  {App.d["PuntiDiSuffisso"]}: {cpu.Punteggio}";
+        PuntiUtente.Text = $"{App.d["PuntiDiPrefisso"]} {g.Nome} {App.d["PuntiDiSuffisso"]}: {g.Punteggio}";
         NelMazzoRimangono.Text = $"{App.d["NelMazzoRimangono"]} {m.GetNumeroCarte()} {App.d["carte"]}";
-        CartaBriscola.Text = $"{App.d["IlSemeDiBriscolaE"]}: {briscola.GetSemeStr()}";
+        CartaBriscola.Text = $"{App.d["IlSemeDiBriscolaE"]}: {briscola.SemeStr}";
         Level.Text = $"{App.d["IlLivelloE"]}: {helper.GetLivello()}";
         NelMazzoRimangono.IsVisible = true;
         CartaBriscola.IsVisible = true;
@@ -242,7 +242,7 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
             secondo = g;
             GiocaCpu();
         }
-        VisualizzaImmagine(Carta.GetCarta(e.GetCartaBriscola()).GetID(), 4, 4, false);
+        VisualizzaImmagine(Carta.GetCarta(e.CartaBriscola).Id, 4, 4, false);
         Applicazione.IsVisible = true;
     }
     private void GiocaCpu()
@@ -253,10 +253,10 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
             cpu.Gioca(0);
         else
             cpu.Gioca(0, g, true);
-        quale = cpu.GetICartaGiocata();
+        quale = cpu.ICartaGiocata;
         img1 = (Image)this.FindByName("Cpu" + quale);
         img1.IsVisible = false;
-        VisualizzaImmagine(cpu.GetCartaGiocata().GetID(), 2, 2, false);
+        VisualizzaImmagine(cpu.CartaGiocata.Id, 2, 2, false);
     }
     private bool AggiungiCarte()
     {
@@ -294,8 +294,8 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
     public void AggiornaOpzioni()
     {
         UInt16 level = (UInt16)Preferences.Get("livello", 3);
-        g.SetNome(Preferences.Get("nomeUtente", ""));
-        cpu.SetNome(Preferences.Get("nomeCpu", ""));
+        g.Nome=Preferences.Get("nomeUtente", "");
+        cpu.Nome=Preferences.Get("nomeCpu", "");
         secondi = (UInt16)Preferences.Get("secondi", 5);
         avvisaTalloneFinito = Preferences.Get("avvisaTalloneFinito", true);
         briscolaDaPunti = Preferences.Get("briscolaDaPunti", false);

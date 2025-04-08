@@ -8,11 +8,10 @@ Questo gioco dimostra che la teoria dei giochi è vera: l'algorimo brevettato fu
 ![made in parco grifeo](https://github.com/user-attachments/assets/8f3e561e-6002-4dd8-bc50-888c14a1dfe3)
 
 
-Una revisitazione della briscola "hard core" (i bambini che urlano "guarda che sto piombo a denari" davanti al monitor...) per dare la risposta di seme (il "poker" nella teoria dei giochi).
-É basata sul supervisore, che garantisce una corretta esecuzione delle operazioni, senza però spiare le carte.
-La IA è quella dell briscola classica, andrebbe cambiata per giocare lo stesso seme se non c'è risposta, ma non penso che lo farò.
+Quello che avete davanti non è il gioco del poker come si intende oggi, perché oggi tutti i simulatori di poker usano il telesina ed in multiplayer. Quello che avete davanti è un simulatore equo e professionale, con punteggio aggiornato in tempo reale, in modo da poter decidere se "rischiare" o meno coscientemente, scritto in maui, internazionalizzato in inglese, francese, spagnolo, tedesco, italiano e portoghese. Su windows per cambiare il dialetto é sufficente modificare le impostazioni di sistema, su android 14 e 15 pure, sui precedenti bisogna disinstallare e reinstallare il programma. Il gioco è più godibile sui tablet in modalità portrait, non landscape. Sembra strano a dirsi, ma il gioco è hard core perché consente di cambiare in ogni istante l'andamento della partita cosicentemente con le proprie scelte. É basata sul supervisore, che garantisce una corretta esecuzione delle operazioni, senza però spiare le carte.
+La IA non è più quella dell briscola classica, ora si fissa sul seme "primo di mano".
+L'assembly su cui si basa usa il linq, su android funziona, su windows no, per via delle ottimizzazioni del framework.
 
-Quello che avete davanti non è il gioco della briscola come si intende oggi, perché oggi tutti i simulatori di briscola dicono "hai preso l'asso, bravo" e finisce lì. Quello che avete davanti è un simulatore equo e professionale, con punteggio aggiornato in tempo reale, in modo da poter decidere se "rischiare" o meno coscientemente. Sembra strano a dirsi, ma è Hard Core, perché si ha in ogni istante il potere di cambiare in ogni istante l'andamento della parita coscientemente con le proprie scelte.
 
 ## Come installare
 

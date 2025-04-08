@@ -25,7 +25,7 @@ Per windows i package msix sono platform indepedent ed in IL, per cui è suffici
 
 ## Bug noti
 
-Su windows il linq nkn funziona granché bene. Potete trovarvi il vettore delle carte in mano downgradato senza motivo.
+Su windows il linq non funziona granché bene. Potete trovarvi il vettore delle carte in mano downgradato senza motivo.
 Per android: se il cellulare finisce sotto un tram risulta impossibile giocare xD
 
 ## Donazioni

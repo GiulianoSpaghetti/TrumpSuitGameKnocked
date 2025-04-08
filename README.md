@@ -25,7 +25,10 @@ Per windows i package msix sono platform indepedent ed in IL, per cui è suffici
 
 ## Bug noti
 
-Su windows il linq non funziona granché bene. Potete trovarvi il vettore delle carte in mano downgradato senza motivo.
+Su windows serve il dotnet 9.0.4 perché è il primo su cui il linq funziona bene.
+
+Se buttate il pc dalla fnestra il software protrebbe noln aprirsi più xD
+
 Per android: se il cellulare finisce sotto un tram risulta impossibile giocare xD
 
 ## Donazioni

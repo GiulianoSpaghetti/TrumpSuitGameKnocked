@@ -250,7 +250,7 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
         UInt16 quale = 0;
         Image img1 = Cpu0;
         if (primo == cpu)
-            cpu.Gioca(0);
+            cpu.Gioca(0, true);
         else
             cpu.Gioca(0, g, true);
         quale = cpu.ICartaGiocata;

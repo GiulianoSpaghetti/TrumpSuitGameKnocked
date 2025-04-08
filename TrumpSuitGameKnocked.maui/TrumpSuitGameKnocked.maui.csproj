@@ -47,7 +47,7 @@
 		<AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
 		<GenerateTestArtifacts>True</GenerateTestArtifacts>
 		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-		<AppInstallerUri>https://github.com/GiulianoSpaghetti/TrumpSuitGameKnocked.maui/releases/download/0.9.5/TrumpSuitGameKnocked_arm64.msix</AppInstallerUri>
+		<AppInstallerUri>https://github.com/GiulianoSpaghetti/TrumpSuitGameKnocked.maui/releases/download/0.9.7/TrumpSuitGameKnocked_arm64.msix</AppInstallerUri>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -68,10 +68,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CardFramework.Maui" Version="1.5.4" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="11.2.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.50" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.3" />
-		<PackageReference Include="CardFramework.Maui" Version="1.5.3" />
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.3" />
 	</ItemGroup>
 

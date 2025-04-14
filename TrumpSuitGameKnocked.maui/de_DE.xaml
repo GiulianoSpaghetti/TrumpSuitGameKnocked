@@ -13,7 +13,7 @@
     <system:String x:Key="NomeUtente">Nutzername</system:String>
     <system:String x:Key="NomeCpu">CPU-Name</system:String>
     <system:String x:Key="secondi">Sekunden, in denen die Stücke gezeigt werden</system:String>
-    <system:String x:Key="Applicazione">Anwendung</system:String>
+    <system:String x:Key="Applicazione">Trumpfspiel mit Farbantwort</system:String>
     <system:String x:Key="Informazioni">Information</system:String>
     <system:String x:Key="Opzioni">Optionen</system:String>
     <system:String x:Key="PartitaPatta">Das Spiel ist unentschieden</system:String>

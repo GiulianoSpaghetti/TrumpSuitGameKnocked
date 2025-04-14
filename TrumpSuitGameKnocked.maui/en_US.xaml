@@ -13,7 +13,7 @@
     <system:String x:Key="NomeUtente">User name</system:String>
     <system:String x:Key="NomeCpu">CPU name</system:String>
     <system:String x:Key="secondi">Seconds during the which showing the plays</system:String>
-    <system:String x:Key="Applicazione">Application</system:String>
+    <system:String x:Key="Applicazione">Trump Game with suit response</system:String>
     <system:String x:Key="Informazioni">Informations</system:String>
     <system:String x:Key="Opzioni">Options</system:String>
     <system:String x:Key="PartitaPatta">The game is drown</system:String>

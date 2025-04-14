@@ -13,7 +13,7 @@
     <system:String x:Key="NomeUtente">Nom d'utilisateur</system:String>
     <system:String x:Key="NomeCpu">Nom du processeur</system:String>
     <system:String x:Key="secondi">Secondes pendant lesquelles montrer les pièces</system:String>
-    <system:String x:Key="Applicazione">Application</system:String>
+    <system:String x:Key="Applicazione">jeu d'atout avec réponse de couleur</system:String>
     <system:String x:Key="Informazioni">Informations</system:String>
     <system:String x:Key="Opzioni">Choix</system:String>
     <system:String x:Key="PartitaPatta">Le jeu est tiré</system:String>

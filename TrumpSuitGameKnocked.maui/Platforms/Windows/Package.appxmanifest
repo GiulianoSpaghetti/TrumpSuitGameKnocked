@@ -8,7 +8,7 @@
     IgnorableNamespaces="uap rescap com desktop">
 
 
-	<Identity Name="maui-package-name-placeholder" Publisher="CN=Giulio Sorrentino, O=numeronesoft, C=IT" Version="0.9.7.0" />
+	<Identity Name="maui-package-name-placeholder" Publisher="CN=Giulio Sorrentino, O=numeronesoft, C=IT" Version="1.0.1.0" />
 
 
   <Properties>

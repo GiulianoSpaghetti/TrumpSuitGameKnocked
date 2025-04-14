@@ -20,7 +20,7 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Label Text="Trump Suit Game Knocked 1.0" Grid.Row="0" />
+            <Label Text="Trump Suit Game Knocked 1.0.1" Grid.Row="0" />
             <Label Text="Two player trump game simulator without multiplayer with suit response, based on TrumpSuitGame of Giulio Sorrentino"  Grid.Row="1"/>
             <Label Text="ⓒ Giulio Sorrentino 2023-2025, some right reserved" Grid.Row="2" />
             <Label Text="License: GPLv3 or, in your humble opinion, any later version" Grid.Row="3"/>

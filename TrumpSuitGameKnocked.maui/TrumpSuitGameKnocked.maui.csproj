@@ -21,14 +21,14 @@
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>The trump game Knocked</ApplicationTitle>
+		<ApplicationTitle>The Trump Game Knocked</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>org.altervista.numerone.trumpsuitgameknocked</ApplicationId>
 
 		<!-- Versions -->
-		<ApplicationDisplayVersion>0.9.7</ApplicationDisplayVersion>
-		<ApplicationVersion>41</ApplicationVersion>
+		<ApplicationDisplayVersion>1.0.1</ApplicationDisplayVersion>
+		<ApplicationVersion>44</ApplicationVersion>
 
 		<!-- To develop, package, and publish an app to the Microsoft Store, see: https://aka.ms/MauiTemplateUnpackaged -->
 		<WindowsPackageType>MSIX</WindowsPackageType>
@@ -47,7 +47,7 @@
 		<AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
 		<GenerateTestArtifacts>True</GenerateTestArtifacts>
 		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-		<AppInstallerUri>https://github.com/GiulianoSpaghetti/TrumpSuitGameKnocked.maui/releases/download/0.9.7/TrumpSuitGameKnocked_arm64.msix</AppInstallerUri>
+		<AppInstallerUri>https://github.com/GiulianoSpaghetti/TrumpSuitGameKnocked.maui/releases/download/1.0/TrumpSuitGameKnocked_arm64.msix</AppInstallerUri>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -68,11 +68,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CardFramework.Maui" Version="1.5.4" />
+		<PackageReference Include="CardFramework.Maui" Version="1.5.5" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="11.2.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.50" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.3" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.4" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.4" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android35.0'">
@@ -177,9 +177,9 @@
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-windows10.0.26100.0'">
 		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.3.2" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.4" />
 		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1742" />
 		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.7.250310001" />
-		<PackageReference Include="System.Speech" Version="9.0.3" />
+		<PackageReference Include="System.Speech" Version="9.0.4" />
 	</ItemGroup>
 </Project>

@@ -13,7 +13,7 @@
     <system:String x:Key="NomeUtente">Nome utente</system:String>
     <system:String x:Key="NomeCpu">Nome della CPU</system:String>
     <system:String x:Key="secondi">Secondi durante i quali mostrare le giocate</system:String>
-    <system:String x:Key="Applicazione">Applicazione</system:String>
+    <system:String x:Key="Applicazione">Briscola con risposta del colore</system:String>
     <system:String x:Key="Informazioni">Informazioni</system:String>
     <system:String x:Key="Opzioni">Opzioni</system:String>
     <system:String x:Key="PartitaPatta">La partita è patta</system:String>

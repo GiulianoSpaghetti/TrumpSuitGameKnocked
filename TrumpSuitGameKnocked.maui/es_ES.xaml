@@ -13,7 +13,7 @@
     <system:String x:Key="NomeUtente">Nombre de usuario</system:String>
     <system:String x:Key="NomeCpu">Nombre de la CPU</system:String>
     <system:String x:Key="secondi">Segundos durante los cuales mostrar las jugadas</system:String>
-    <system:String x:Key="Applicazione">Solicitud</system:String>
+    <system:String x:Key="Applicazione">Juego de triunfo con respuesta de palo</system:String>
     <system:String x:Key="Informazioni">Informaciones</system:String>
     <system:String x:Key="Opzioni">Opciones</system:String>
     <system:String x:Key="PartitaPatta">El juego esta dibujado</system:String>

@@ -16,11 +16,12 @@ public partial class MainPage : ContentPage
     private static TapGestureRecognizer gesture;
     private static ElaboratoreCarteBriscola e;
     private static GiocatoreHelperCpu helper;
-    public static MainPage main;
+    private static MainPage mainpage;
+    public static MainPage MainPageInstance { get => mainpage; }
     public MainPage()
     {
         this.InitializeComponent();
-        main = this;
+        mainpage = this;
         briscolaDaPunti = Preferences.Get("briscolaDaPunti", false);
         avvisaTalloneFinito = Preferences.Get("avvisaTalloneFinito", true);
         secondi = (UInt16)Preferences.Get("secondi", 5);

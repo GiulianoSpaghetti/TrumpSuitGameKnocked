@@ -43,6 +43,8 @@ Negli anni 2000 capitava a casa grazie alla wxbriscola, oggi può capitare per l
 
 ## Video di presentazione per android
 
+https://youtu.be/coAx5hXJi5s
+
 ## Come installare
 
 ## Su Android

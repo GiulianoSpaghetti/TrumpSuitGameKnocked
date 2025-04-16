@@ -41,6 +41,8 @@ Negli anni 2000 capitava a casa grazie alla wxbriscola, oggi può capitare per l
 
 ## Video di presentazione per Windows
 
+https://photos.app.goo.gl/PUg7toWveeeDj1MF6
+
 ## Video di presentazione per android
 
 https://youtu.be/coAx5hXJi5s

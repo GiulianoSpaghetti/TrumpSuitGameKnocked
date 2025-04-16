@@ -38,6 +38,11 @@ E' questo il motto registrato, in entrambe le sue forme.
 Negli anni 2000 capitava a casa grazie alla wxbriscola, oggi può capitare per la strada.
 
 ## Screenshots su windows
+![Immagine 2025-04-16 201707](https://github.com/user-attachments/assets/148a6231-2ac1-438a-97b2-b4df2be7609a)
+![Immagine 2025-04-16 201638](https://github.com/user-attachments/assets/cac92010-b24d-45ac-9038-e6811acaa173)
+![Immagine 2025-04-16 201428](https://github.com/user-attachments/assets/80cb4687-e64f-4c92-9459-1d4a9f62240a)
+
+
 
 ## Video di presentazione per Windows
 

@@ -8,9 +8,9 @@ public partial class AppShell : Shell
     public AppShell()
     {
     InitializeComponent();
-        scapplicazione.Title=App.d["Applicazione"] as string;
-        scopzioni.Title=App.d["Opzioni"] as string;
-        scinformazioni.Title=App.d["Informazioni"] as string;
+        scapplicazione.Title=App.Dictionary["Applicazione"] as string;
+        scopzioni.Title=App.Dictionary["Opzioni"] as string;
+        scinformazioni.Title=App.Dictionary["Informazioni"] as string;
     }
 
     protected override void OnNavigated(ShellNavigatedEventArgs args)

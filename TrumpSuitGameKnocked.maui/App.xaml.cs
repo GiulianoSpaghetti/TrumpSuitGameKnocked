@@ -4,32 +4,24 @@ namespace TrumpSuitGameKnocked.maui;
 
 public partial class App : Application
 {
-    private static string piattaforma;
-    private static ResourceDictionary dic=null;
-    public static ResourceDictionary d
-    {
-        get => dic;
-    }
+    public static ResourceDictionary Dictionary { get; private set; }
     public static readonly CancellationTokenSource cancellationTokenSource= new CancellationTokenSource();
-    public static string Piattaforma
-    {
-        get => piattaforma;
-    }
+    public static string Piattaforma { get; private set; }
     public App()
     {
         InitializeComponent();
         try
         {
-            dic = Resources[CultureInfo.CurrentCulture.TwoLetterISOLanguageName] as ResourceDictionary;
+            Dictionary = Resources[CultureInfo.CurrentCulture.TwoLetterISOLanguageName] as ResourceDictionary;
 
         }
         catch (Exception ex)
         {
-            dic = Resources["en"] as ResourceDictionary;
+            Dictionary = Resources["en"] as ResourceDictionary;
         }
-        piattaforma = DeviceInfo.Current.Model;
-        if (piattaforma == "System Product Name")
-            piattaforma = "Windows " + DeviceInfo.Current.VersionString;
+        Piattaforma = DeviceInfo.Current.Model;
+        if (Piattaforma == "System Product Name")
+            Piattaforma = "Windows " + DeviceInfo.Current.VersionString;
     }
 
 #if ANDROID

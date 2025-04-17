@@ -7,7 +7,7 @@ public partial class InfoPage : ContentPage
     public InfoPage()
 	{
 		InitializeComponent();
-        Title = $"{App.d["Informazioni"]}";
+        Title = $"{App.Dictionary["Informazioni"]}";
     }
     private async void OnSito_Click(object sender, EventArgs e)
     {

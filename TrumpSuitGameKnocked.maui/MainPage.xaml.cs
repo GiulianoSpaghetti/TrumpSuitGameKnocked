@@ -16,19 +16,18 @@ public partial class MainPage : ContentPage
     private static TapGestureRecognizer gesture;
     private static ElaboratoreCarteBriscola e;
     private static GiocatoreHelperCpu helper;
-    private static MainPage mainpage;
-    public static MainPage MainPageInstance { get => mainpage; }
+    public static MainPage MainPageInstance { get; private set; }
     public MainPage()
     {
         this.InitializeComponent();
-        mainpage = this;
+        MainPageInstance = this;
         briscolaDaPunti = Preferences.Get("briscolaDaPunti", false);
         avvisaTalloneFinito = Preferences.Get("avvisaTalloneFinito", true);
         secondi = (UInt16)Preferences.Get("secondi", 5);
         e = new ElaboratoreCarteBriscola(briscolaDaPunti);
         m = new Mazzo(e);
         Carta.Inizializza(40, new org.altervista.numerone.framework.briscola.CartaHelper(e.CartaBriscola),
-App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string, App.d["spade"] as string
+App.Dictionary["bastoni"] as string, App.Dictionary["coppe"] as string, App.Dictionary["denari"] as string, App.Dictionary["spade"] as string
 );
         g = new Giocatore(new GiocatoreHelperUtente(), Preferences.Get("nomeUtente", "numerone"), 3);
         switch (Preferences.Get("livello", 3))
@@ -55,17 +54,17 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
 
         NomeUtente.Text = g.Nome;
         NomeCpu.Text = cpu.Nome;
-        PuntiCpu.Text = $"{App.d["PuntiDiPrefisso"]} {cpu.Nome} {App.d["PuntiDiSuffisso"]}: {cpu.Punteggio}";
-        PuntiUtente.Text = $"{App.d["PuntiDiPrefisso"]} {g.Nome} {App.d["PuntiDiSuffisso"]}: {g.Punteggio}";
-        NelMazzoRimangono.Text = $"{App.d["NelMazzoRimangono"]} {m.GetNumeroCarte()} {App.d["carte"]}"; 
-        CartaBriscola.Text = $"{App.d["IlSemeDiBriscolaE"]}: {briscola.SemeStr}";
-        Level.Text = $"{App.d["IlLivelloE"]}: {helper.GetLivello()}";
-        Archivio.Text = $"{App.d["File"]}";
-        Info.Text = $"{App.d["Info"]}";
-        NuovaPartitaMenu.Text = $"{App.d["NuovaPartita"]}";
-        OpzioniMenu.Text = $"{App.d["Opzioni"]}";
-        EsciMenu.Text = $"{App.d["Esci"]}";
-        InfoMenu.Text = $"{App.d["Informazioni"]}";
+        PuntiCpu.Text = $"{App.Dictionary["PuntiDiPrefisso"]} {cpu.Nome} {App.Dictionary["PuntiDiSuffisso"]}: {cpu.Punteggio}";
+        PuntiUtente.Text = $"{App.Dictionary["PuntiDiPrefisso"]} {g.Nome} {App.Dictionary["PuntiDiSuffisso"]}: {g.Punteggio}";
+        NelMazzoRimangono.Text = $"{App.Dictionary["NelMazzoRimangono"]} {m.GetNumeroCarte()} {App.Dictionary["carte"]}"; 
+        CartaBriscola.Text = $"{App.Dictionary["IlSemeDiBriscolaE"]}: {briscola.SemeStr}";
+        Level.Text = $"{App.Dictionary["IlLivelloE"]}: {helper.GetLivello()}";
+        Archivio.Text = $"{App.Dictionary["File"]}";
+        Info.Text = $"{App.Dictionary["Info"]}";
+        NuovaPartitaMenu.Text = $"{App.Dictionary["NuovaPartita"]}";
+        OpzioniMenu.Text = $"{App.Dictionary["Opzioni"]}";
+        EsciMenu.Text = $"{App.Dictionary["Esci"]}";
+        InfoMenu.Text = $"{App.Dictionary["Informazioni"]}";
         VisualizzaImmagine(Carta.GetCarta(e.CartaBriscola).Id, 4, 4, false);
 
         t = Dispatcher.CreateTimer();
@@ -91,16 +90,16 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
             }
 
             primo.AggiornaPunteggio(secondo);
-            PuntiCpu.Text = $"{App.d["PuntiDiPrefisso"]} {cpu.Nome} {App.d["PuntiDiSuffisso"]}: {cpu.Punteggio}";
-            PuntiUtente.Text = $"{App.d["PuntiDiPrefisso"]} {g.Nome} {App.d["PuntiDiSuffisso"]}: {g.Punteggio}";
+            PuntiCpu.Text = $"{App.Dictionary["PuntiDiPrefisso"]} {cpu.Nome} {App.Dictionary["PuntiDiSuffisso"]}: {cpu.Punteggio}";
+            PuntiUtente.Text = $"{App.Dictionary["PuntiDiPrefisso"]} {g.Nome} {App.Dictionary["PuntiDiSuffisso"]}: {g.Punteggio}";
             if (AggiungiCarte())
             {
-                NelMazzoRimangono.Text = $"{App.d["NelMazzoRimangono"]} {m.GetNumeroCarte()} {App.d["carte"]}";
-                CartaBriscola.Text = $"{App.d["IlSemeDiBriscolaE"]}: {briscola.SemeStr}";
+                NelMazzoRimangono.Text = $"{App.Dictionary["NelMazzoRimangono"]} {m.GetNumeroCarte()} {App.Dictionary["carte"]}";
+                CartaBriscola.Text = $"{App.Dictionary["IlSemeDiBriscolaE"]}: {briscola.SemeStr}";
 		switch (m.GetNumeroCarte()) 
 		{
 			case 2: if (avvisaTalloneFinito)
-                        		snack = $"{App.d["IlTalloneEFinito"]}\r\n";
+                        		snack = $"{App.Dictionary["IlTalloneEFinito"]}\r\n";
                         break;
                         case 0: ((Image)this.FindByName(Carta.GetCarta(e.CartaBriscola).Id)).IsVisible = false;
                     		NelMazzoRimangono.IsVisible = false;
@@ -121,9 +120,9 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
                 {
                     GiocaCpu();
                     if (cpu.CartaGiocata.StessoSeme(briscola))
-                        snack += $"{App.d["LaCpuHaGiocatoIl"]} {cpu.CartaGiocata.Valore + 1} {App.d["Briscola"]}\n";
+                        snack += $"{App.Dictionary["LaCpuHaGiocatoIl"]} {cpu.CartaGiocata.Valore + 1} {App.Dictionary["Briscola"]}\n";
                     else if (cpu.CartaGiocata.Punteggio > 0)
-                        snack += $"{App.d["LaCpuHaGiocatoIl"]} {cpu.CartaGiocata.Valore + 1} {App.d["di"]} {cpu.CartaGiocata.SemeStr}\n";
+                        snack += $"{App.Dictionary["LaCpuHaGiocatoIl"]} {cpu.CartaGiocata.Valore + 1} {App.Dictionary["di"]} {cpu.CartaGiocata.SemeStr}\n";
                     if (snack != "")
                         Snackbar.Make(snack.Trim()).Show(App.cancellationTokenSource.Token);
                 }
@@ -192,7 +191,7 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
         Image img;
         UInt16 level = (UInt16)Preferences.Get("livello", 3);
         if (level != helper.GetLivello()) {
-            Snackbar.Make($"{App.d["NuovaPartitaPerLivello"]}").Show(App.cancellationTokenSource.Token);
+            Snackbar.Make($"{App.Dictionary["NuovaPartitaPerLivello"]}").Show(App.cancellationTokenSource.Token);
             numeroPartite = 0;
         }
         e = new ElaboratoreCarteBriscola(briscolaDaPunti);
@@ -225,11 +224,11 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
         Cpu1.IsVisible = true;
         Cpu2.IsVisible = true;
 
-        PuntiCpu.Text = $"{App.d["PuntiDiPrefisso"]} {cpu.Nome}  {App.d["PuntiDiSuffisso"]}: {cpu.Punteggio}";
-        PuntiUtente.Text = $"{App.d["PuntiDiPrefisso"]} {g.Nome} {App.d["PuntiDiSuffisso"]}: {g.Punteggio}";
-        NelMazzoRimangono.Text = $"{App.d["NelMazzoRimangono"]} {m.GetNumeroCarte()} {App.d["carte"]}";
-        CartaBriscola.Text = $"{App.d["IlSemeDiBriscolaE"]}: {briscola.SemeStr}";
-        Level.Text = $"{App.d["IlLivelloE"]}: {helper.GetLivello()}";
+        PuntiCpu.Text = $"{App.Dictionary["PuntiDiPrefisso"]} {cpu.Nome}  {App.Dictionary["PuntiDiSuffisso"]}: {cpu.Punteggio}";
+        PuntiUtente.Text = $"{App.Dictionary["PuntiDiPrefisso"]} {g.Nome} {App.Dictionary["PuntiDiSuffisso"]}: {g.Punteggio}";
+        NelMazzoRimangono.Text = $"{App.Dictionary["NelMazzoRimangono"]} {m.GetNumeroCarte()} {App.Dictionary["carte"]}";
+        CartaBriscola.Text = $"{App.Dictionary["IlSemeDiBriscolaE"]}: {briscola.SemeStr}";
+        Level.Text = $"{App.Dictionary["IlLivelloE"]}: {helper.GetLivello()}";
         NelMazzoRimangono.IsVisible = true;
         CartaBriscola.IsVisible = true;
         primoUtente = !primoUtente;
@@ -284,7 +283,7 @@ App.d["bastoni"] as string, App.d["coppe"] as string, App.d["denari"] as string,
         }
         catch (Exception ex)
         {
-            Snackbar.Make(App.d["MossaNonConsentita"] as string).Show(App.cancellationTokenSource.Token);
+            Snackbar.Make(App.Dictionary["MossaNonConsentita"] as string).Show(App.cancellationTokenSource.Token);
             return;
         }
         t.Start();

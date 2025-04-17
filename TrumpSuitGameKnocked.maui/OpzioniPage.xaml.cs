@@ -23,14 +23,14 @@ public partial class OpzioniPage : ContentPage
         swAvvisaTallone.IsToggled = avvisaTalloneFinito;
         swCartaBriscola.IsToggled = briscolaDaPunti;
         pkrlivello.SelectedIndex = livello - 1;
-        Title = $"{App.d["Opzioni"]}";
-        opNomeCpu.Text = $"{App.d["NomeCpu"]}: ";
-        opNomeUtente.Text= $"{App.d["NomeUtente"]}: ";
-        lbSecondi.Text= $"{App.d["secondi"]}";
-        lbLivello.Text = $"{App.d["IlLivelloE"]}";
-        lbCartaBriscola.Text= $"{App.d["BriscolaDaPunti"]}";
-        lbAvvisaTallone.Text= $"{App.d["AvvisaTallone"]}";
-        btnOk.Text= $"{App.d["Salva"]}";
+        Title = $"{App.Dictionary["Opzioni"]}";
+        opNomeCpu.Text = $"{App.Dictionary["NomeCpu"]}: ";
+        opNomeUtente.Text= $"{App.Dictionary["NomeUtente"]}: ";
+        lbSecondi.Text= $"{App.Dictionary["secondi"]}";
+        lbLivello.Text = $"{App.Dictionary["IlLivelloE"]}";
+        lbCartaBriscola.Text= $"{App.Dictionary["BriscolaDaPunti"]}";
+        lbAvvisaTallone.Text= $"{App.Dictionary["AvvisaTallone"]}";
+        btnOk.Text= $"{App.Dictionary["Salva"]}";
     }
 
     public async void OnOk_Click(Object source, EventArgs evt)
@@ -48,17 +48,17 @@ public partial class OpzioniPage : ContentPage
         }
         catch (FormatException ex)
         {
-            await Snackbar.Make($"{App.d["ValoreNonValido"]}").Show(App.cancellationTokenSource.Token);
+            await Snackbar.Make($"{App.Dictionary["ValoreNonValido"]}").Show(App.cancellationTokenSource.Token);
             return;
         }
            catch (OverflowException ex)
         {
-            await Snackbar.Make($"{App.d["ValoreNonValido"]}").Show(App.cancellationTokenSource.Token);
+            await Snackbar.Make($"{App.Dictionary["ValoreNonValido"]}").Show(App.cancellationTokenSource.Token);
             return;
         }
         if (secondi <5 || secondi>20)
         {
-            await Snackbar.Make($"{App.d["ValoreNonValido"]}").Show(App.cancellationTokenSource.Token);
+            await Snackbar.Make($"{App.Dictionary["ValoreNonValido"]}").Show(App.cancellationTokenSource.Token);
             txtSecondi.Text = ((UInt16)Preferences.Get("secondi", 5)).ToString();
             return;
         }

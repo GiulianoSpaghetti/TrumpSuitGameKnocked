@@ -5,8 +5,11 @@ Questo gioco dimostra che la teoria dei giochi è vera: l'algorimo brevettato fu
 ![Napoli-Logo](https://github.com/user-attachments/assets/8163c808-62d3-40d3-bce3-0957e57bc26a)
 ![made in parco grifeo](https://github.com/user-attachments/assets/fadbf046-aeae-4f11-bda4-eb332c701d56)
 
-
-![made-with-microsoft-maui](https://github.com/user-attachments/assets/5a4451df-7baf-44e9-b73d-001bd59c6ecd)
+![made-with-microsoft-maui](https://github.com/user-attachments/assets/2625f23d-ca78-4d34-901f-ea7936c2469d)
+[![forthebadge](https://forthebadge.com/images/badges/woo-new-release.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/works-on-my-machine.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-for-android.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com)
 
 [![forthebadge](https://forthebadge.com/images/badges/approved-by-my-mom.svg)](https://forthebadge.com)
 

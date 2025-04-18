@@ -42,6 +42,8 @@ Negli anni 2000 capitava a casa grazie alla wxbriscola, oggi può capitare per l
 ![Immagine 2025-04-16 201638](https://github.com/user-attachments/assets/cac92010-b24d-45ac-9038-e6811acaa173)
 ![Immagine 2025-04-16 201428](https://github.com/user-attachments/assets/80cb4687-e64f-4c92-9459-1d4a9f62240a)
 
+[![forthebadge](https://forthebadge.com/images/badges/approved-by-my-mom.svg)](https://forthebadge.com)
+
 
 
 ## Video di presentazione per Windows

@@ -5,6 +5,8 @@ Questo gioco dimostra che la teoria dei giochi è vera: l'algorimo brevettato fu
 ![Napoli-Logo](https://github.com/user-attachments/assets/8163c808-62d3-40d3-bce3-0957e57bc26a)
 ![made in parco grifeo](https://github.com/user-attachments/assets/fadbf046-aeae-4f11-bda4-eb332c701d56)
 
+[![forthebadge](https://forthebadge.com/images/badges/approved-by-my-mom.svg)](https://forthebadge.com)
+
 
 ## TrumpSuitGameKnocked
 Quello che avete davanti non è il gioco della briscola come si intende oggi, perché oggi tutti i simulatori di briscola dicono "hai preso l'asso, bravo" e finisce lì. Quello che avete davanti è un simulatore equo e professionale, con punteggio aggiornato in tempo reale, in modo da poter decidere se "rischiare" o meno coscientemente, scritto in maui, internazionalizzato in inglese, francese, spagnolo, tedesco, italiano e portoghese.
@@ -41,8 +43,6 @@ Negli anni 2000 capitava a casa grazie alla wxbriscola, oggi può capitare per l
 ![Immagine 2025-04-16 201707](https://github.com/user-attachments/assets/148a6231-2ac1-438a-97b2-b4df2be7609a)
 ![Immagine 2025-04-16 201638](https://github.com/user-attachments/assets/cac92010-b24d-45ac-9038-e6811acaa173)
 ![Immagine 2025-04-16 201428](https://github.com/user-attachments/assets/80cb4687-e64f-4c92-9459-1d4a9f62240a)
-
-[![forthebadge](https://forthebadge.com/images/badges/approved-by-my-mom.svg)](https://forthebadge.com)
 
 
 

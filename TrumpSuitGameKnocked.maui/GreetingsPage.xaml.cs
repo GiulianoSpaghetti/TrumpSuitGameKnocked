@@ -4,10 +4,10 @@ namespace TrumpSuitGameKnocked.maui;
 
 public partial class GreetingsPage : ContentPage
 {
-    private static Giocatore g, cpu;
-    private static Mazzo m;
-    private static UInt128 partite;
-    private static UInt16 puntiUtente, puntiCpu;
+    private Giocatore g, cpu;
+    private Mazzo m;
+    private UInt128 partite;
+    private UInt16 puntiUtente, puntiCpu;
 	public GreetingsPage(Giocatore gi, Giocatore cp, GiocatoreHelperCpu helper, Mazzo mazzo, UInt16 vecchiPuntiUtente, UInt16 vecchiPuntiCpu, UInt128 NumeroPartite)
 	{
 		InitializeComponent();

@@ -6,10 +6,10 @@ namespace TrumpSuitGameKnocked.maui;
 
 public partial class OpzioniPage : ContentPage
 {
-    private static bool briscolaDaPunti;
-    private static bool avvisaTalloneFinito;
-    private static UInt16 secondi;
-    private static UInt16 livello;
+    private bool briscolaDaPunti;
+    private bool avvisaTalloneFinito;
+    private UInt16 secondi;
+    private UInt16 livello;
     public OpzioniPage()
     {
         InitializeComponent();

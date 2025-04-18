@@ -5,17 +5,17 @@ namespace TrumpSuitGameKnocked.maui;
 
 public partial class MainPage : ContentPage
 {
-    private static Giocatore g, cpu, primo, secondo, temp;
-    private static Mazzo m;
-    private static Carta c, c1, briscola;
-    private static bool aggiornaNomi = false, primoUtente=true;
-    private static UInt16 secondi = 5, vecchiPuntiUtente=0, vecchiPuntiCPU=0;
-    private static UInt128 numeroPartite=0;
-    private static bool avvisaTalloneFinito = true, briscolaDaPunti = false;
-    private static IDispatcherTimer t;
-    private static TapGestureRecognizer gesture;
-    private static ElaboratoreCarteBriscola e;
-    private static GiocatoreHelperCpu helper;
+    private Giocatore g, cpu, primo, secondo, temp;
+    private Mazzo m;
+    private Carta c, c1, briscola;
+    private bool aggiornaNomi = false, primoUtente=true;
+    private UInt16 secondi = 5, vecchiPuntiUtente=0, vecchiPuntiCPU=0;
+    private UInt128 numeroPartite=0;
+    private bool avvisaTalloneFinito = true, briscolaDaPunti = false;
+    private IDispatcherTimer t;
+    private TapGestureRecognizer gesture;
+    private ElaboratoreCarteBriscola e;
+    private GiocatoreHelperCpu helper;
     public static MainPage MainPageInstance { get; private set; }
     public MainPage()
     {

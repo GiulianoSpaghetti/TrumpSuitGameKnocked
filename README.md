@@ -46,6 +46,10 @@ E' questo il motto registrato, in entrambe le sue forme.
 
 Negli anni 2000 capitava a casa grazie alla wxbriscola, oggi può capitare per la strada.
 
+## Il gioco assistito
+
+Con l'avvento delle IA google è riuscita a far capire alle stesse il funzionamento di base del gioco della briscola, per cui su android con IA e sui computer windows con NPU è possibile farsi suggerire dalla IA la carta da giocare. Microsoft, con il winappsdk 1.8, si sta facendo uscire qualcosa di completamente innovativo, per cui spetta a voi decidere quale piattaforma usare, considerando che potete provarle tutte.
+
 ## Screenshots su windows
 ![Immagine 2025-04-16 201707](https://github.com/user-attachments/assets/148a6231-2ac1-438a-97b2-b4df2be7609a)
 ![Immagine 2025-04-16 201638](https://github.com/user-attachments/assets/cac92010-b24d-45ac-9038-e6811acaa173)
@@ -55,11 +59,11 @@ Negli anni 2000 capitava a casa grazie alla wxbriscola, oggi può capitare per l
 
 ## Video di presentazione per Windows
 
-https://photos.app.goo.gl/PUg7toWveeeDj1MF6
+[https://www.youtube.com/watch?v=oL_-hKN_vGA](https://www.youtube.com/watch?v=oL_-hKN_vGA)
 
 ## Video di presentazione per android
 
-https://youtu.be/coAx5hXJi5s
+[https://youtu.be/coAx5hXJi5s](https://youtu.be/coAx5hXJi5s)
 
 ## Come installare
 

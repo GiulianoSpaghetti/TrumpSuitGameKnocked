@@ -48,7 +48,7 @@ Negli anni 2000 capitava a casa grazie alla wxbriscola, oggi può capitare per l
 
 ## Il gioco assistito
 
-Con l'avvento delle IA google è riuscita a far capire alle stesse il funzionamento di base del gioco della briscola, per cui su android con IA e sui computer windows con NPU è possibile farsi suggerire dalla IA la carta da giocare. Microsoft, con il winappsdk 1.8, si sta facendo uscire qualcosa di completamente innovativo, per cui spetta a voi decidere quale piattaforma usare, considerando che potete provarle tutte.
+Con l'avvento delle IA google è riuscita a far capire alle stesse il funzionamento di base del gioco della briscola con risposta di seme, per cui su android con IA e sui computer windows con NPU è possibile farsi suggerire dalla IA la carta da giocare. Microsoft, con il winappsdk 1.8, si sta facendo uscire qualcosa di completamente innovativo, per cui spetta a voi decidere quale piattaforma usare, considerando che potete provarle tutte.
 
 ## Screenshots su windows
 ![Immagine 2025-04-16 201707](https://github.com/user-attachments/assets/148a6231-2ac1-438a-97b2-b4df2be7609a)

@@ -23,6 +23,8 @@ Sembra strano a dirsi, ma il gioco è hard core perché consente di cambiare in 
 L'assembly su cui si basa usa il linq.
 Questa briscola si gioca fissandosi su un seme.
 
+I binari sono in IL e non sono self contained, c'è bisogno del dotnet desktop runtime 8, 9 o 10 (a seconda di quale versione si sceglie), ma l'ultima versione: vengono ricompilati ed ottimizzati per il processore al primo avvio; quindi è sconsigliato il salvataggio del binario da ripristinare tra una reinizializzazione e l'altra o per il passaggio tra più computer.
+
 ## Perché questo gioco è il meglio su android
 
 Personalmente ho visto un po' in giro i nuovi giochini per android. Tutti molto semplici e banali, però sono delle macchinette mangiasoldi.

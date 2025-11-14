@@ -75,6 +75,21 @@ Con l'avvento delle IA google è riuscita a far capire alle stesse il funzioname
 
 [![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=org.altervista.numerone.trumpsuitgameknocked)
 
+## Su Windows
+
+Batsa prendere l'msix che più piace dalle release su github, che sono controllate e non contengono virus. Il package msix è associato ad un certificato .cer che bisogna installare in "Computer locale" > "Persone Attendibili".
+
+Prerequisiti: 
+
+https://winstall.app/apps/Microsoft.DotNet.DesktopRuntime.10
+
+Oppure 9 o o 8 a seconda di quello che scegliete.
+E' consigliabile avere l'appruntime 1.8 installato sul computer (https://winstall.app/apps/Microsoft.WindowsAppRuntime.1.8), anche se si utilizza il desktop runtime 9 o 10. Tutto da provare...
+
+## Aggiornamenti
+
+Per windows i package msix sono platform indepedent ed in IL, per cui è sufficiente scaricarsi il nuovo dotnet framework runtime e reinstallarsi il pacchetto per ottenere il codice binario ottimizzato con le ultime patch.
+
 ## Aggiornamenti
 
 Per windows i package msix sono platform indepedent ed in IL, per cui è sufficiente scaricarsi il nuovo dotnet framework runtime e reinstallarsi il pacchetto per ottenere il codice binario ottimizzato con le ultime patch.

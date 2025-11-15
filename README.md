@@ -73,7 +73,7 @@ Con l'avvento delle IA google è riuscita a far capire alle stesse il funzioname
 
 ## Su Windows
 
-Batsa prendere l'msix che più piace dalle release su github, che sono controllate e non contengono virus. Il package msix è associato ad un certificato .cer che bisogna installare in "Computer locale" > "Persone Attendibili".
+Basta prendere l'msix che più piace dalle release su github, che sono controllate e non contengono virus. Il package msix è associato ad un certificato .cer che bisogna installare in "Computer locale" > "Persone Attendibili".
 
 Prerequisiti: 
 

@@ -76,7 +76,7 @@ E' consigliabile avere l'appruntime 1.8 installato sul computer (https://winstal
 
 ## Aggiornamenti
 
-Per windows i package msix sono platform indepedent ed in IL, ma sono in dotnet 9 e 10, per cui è necessario ricompilare per evitare di avere il sistema spurio in caso di nuovo dotnet framework che comunque è necessario per l'avvio del software, che se aggiornato dovrebbe impeire lo shock sulle ventole.
+Per windows i package msix sono platform indepedent ed in IL, ma sono in dotnet 9 e 10, per cui è necessario ricompilare per evitare di avere il sistema spurio in caso di nuovo dotnet framework che comunque è necessario per l'avvio del software, che se aggiornato dovrebbe impedire lo shock sulle ventole.
 
 ## Bug noti
 

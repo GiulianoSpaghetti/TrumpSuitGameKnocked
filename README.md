@@ -43,9 +43,12 @@ Negli anni 2000 capitava a casa grazie alla wxbriscola, oggi può capitare per l
 Con l'avvento delle IA google è riuscita a far capire alle stesse il funzionamento di base del gioco della briscola con risposta di seme, per cui su android con IA e sui computer windows con NPU è possibile farsi suggerire dalla IA la carta da giocare. Microsoft, con il winappsdk 1.8, si sta facendo uscire qualcosa di completamente innovativo, per cui spetta a voi decidere quale piattaforma usare, considerando che potete provarle tutte.
 
 ## Screenshots su windows
-![Immagine 2025-04-16 201707](https://github.com/user-attachments/assets/148a6231-2ac1-438a-97b2-b4df2be7609a)
-![Immagine 2025-04-16 201638](https://github.com/user-attachments/assets/cac92010-b24d-45ac-9038-e6811acaa173)
-![Immagine 2025-04-16 201428](https://github.com/user-attachments/assets/80cb4687-e64f-4c92-9459-1d4a9f62240a)
+
+<img width="1920" height="2880" alt="Screenshot 2025-12-17 212032" src="https://github.com/user-attachments/assets/ab72088c-111a-41c2-941f-cdf0d338a506" />
+<img width="1920" height="2880" alt="Screenshot 2025-12-17 212015" src="https://github.com/user-attachments/assets/69402cad-9717-47da-bb51-c1060a064c6e" />
+<img width="1920" height="2880" alt="Screenshot 2025-12-17 211937" src="https://github.com/user-attachments/assets/970a7787-87bc-4304-a9b9-63076f9fc170" />
+<img width="1920" height="2880" alt="Screenshot 2025-12-17 211916" src="https://github.com/user-attachments/assets/c6e04958-3141-4f65-b7e4-9b732c9e5ce5" />
+
 
 
 

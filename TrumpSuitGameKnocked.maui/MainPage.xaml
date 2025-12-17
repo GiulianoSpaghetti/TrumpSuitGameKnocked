@@ -36,7 +36,7 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label x:Name="NomeUtente" Text="" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" />
+            <Label x:Name="NomeUtente" Text="" Grid.Row="4" Grid.Column="0" Grid.RowSpan="3" />
             <Image x:Name="n0" Source="n0.png" IsVisible="false"/>
             <Image x:Name="n1" Source="n1.png" IsVisible="false"/>
             <Image x:Name="n2" Source="n2.png" IsVisible="false"/>
@@ -78,11 +78,11 @@
             <Image x:Name="n38" Source="n38.png" IsVisible="false"/>
             <Image x:Name="n39" Source="n39.png" IsVisible="false"/>
 
-            <Image x:Name="Cpu0" Source="retro_carte_pc.png" Grid.Row="3" Grid.Column="0"/>
-            <Image x:Name="Cpu1" Source="retro_carte_pc.png" Grid.Row="3" Grid.Column="1"/>
-            <Image x:Name="Cpu2" Source="retro_carte_pc.png" Grid.Row="3" Grid.Column="2"/>
+            <Image x:Name="Cpu0" Source="retro_carte_pc.png" Grid.Row="1" Grid.Column="0"/>
+            <Image x:Name="Cpu1" Source="retro_carte_pc.png" Grid.Row="1" Grid.Column="1"/>
+            <Image x:Name="Cpu2" Source="retro_carte_pc.png" Grid.Row="1" Grid.Column="2"/>
 
-            <Label x:Name="NomeCpu" Text="" Grid.Row="4" Grid.Column="0" Grid.RowSpan="3" />
+            <Label x:Name="NomeCpu" Text="" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" />
             <Label x:Name="PuntiUtente" Text="" Grid.Row="0" Grid.Column="4" />
             <Label x:Name="PuntiCpu" Text="" Grid.Row="1" Grid.Column="4" />
             <Label x:Name="NelMazzoRimangono" Text="" Grid.Row="2" Grid.Column="4"  />
@@ -90,4 +90,5 @@
             <Label x:Name="Level" Text="" Grid.Row="5" Grid.Column="0" />
         </Grid>
     </ContentPage.Content>
+
 </ContentPage>

@@ -48,9 +48,9 @@ App.Dictionary["bastoni"] as string, App.Dictionary["coppe"] as string, App.Dict
             cpu.AddCarta(m);
 
         }
-        VisualizzaImmagine(g.GetID(0), 1, 0, true);
-        VisualizzaImmagine(g.GetID(1), 1, 1, true);
-        VisualizzaImmagine(g.GetID(2), 1, 2, true);
+        VisualizzaImmagine(g.GetID(0), 3, 0, true);
+        VisualizzaImmagine(g.GetID(1), 3, 1, true);
+        VisualizzaImmagine(g.GetID(2), 3, 2, true);
 
         NomeUtente.Text = g.Nome;
         NomeCpu.Text = cpu.Nome;
@@ -107,7 +107,7 @@ App.Dictionary["bastoni"] as string, App.Dictionary["coppe"] as string, App.Dict
                 }
                 for (UInt16 i = 0; i < g.NumeroCarte; i++)
                 {
-                    VisualizzaImmagine(g.GetID(i), 1, i, true);
+                    VisualizzaImmagine(g.GetID(i), 3, i, true);
                     ((Image)this.FindByName("Cpu" + i)).IsVisible = true;
                 }
                 switch (cpu.NumeroCarte)
@@ -123,9 +123,9 @@ App.Dictionary["bastoni"] as string, App.Dictionary["coppe"] as string, App.Dict
                         snack += $"{App.Dictionary["LaCpuHaGiocatoIl"]} {cpu.CartaGiocata.Valore + 1} {App.Dictionary["Briscola"]}\n";
                     else if (cpu.CartaGiocata.Punteggio > 0)
                         snack += $"{App.Dictionary["LaCpuHaGiocatoIl"]} {cpu.CartaGiocata.Valore + 1} {App.Dictionary["di"]} {cpu.CartaGiocata.SemeStr}\n";
-                    if (snack != "")
-                        Snackbar.Make(snack.Trim()).Show(App.cancellationTokenSource.Token);
-                }
+				}
+                if (snack != "")
+                    Snackbar.Make(snack.Trim()).Show(App.cancellationTokenSource.Token);
 
             }
             else
@@ -216,9 +216,9 @@ App.Dictionary["bastoni"] as string, App.Dictionary["coppe"] as string, App.Dict
             g.AddCarta(m);
             cpu.AddCarta(m);
         }
-        VisualizzaImmagine(g.GetID(0), 1, 0, true);
-        VisualizzaImmagine(g.GetID(1), 1, 1, true);
-        VisualizzaImmagine(g.GetID(2), 1, 2, true);
+        VisualizzaImmagine(g.GetID(0), 3, 0, true);
+        VisualizzaImmagine(g.GetID(1), 3, 1, true);
+        VisualizzaImmagine(g.GetID(2), 3, 2, true);
 
         Cpu0.IsVisible = true;
         Cpu1.IsVisible = true;
@@ -340,3 +340,4 @@ App.Dictionary["bastoni"] as string, App.Dictionary["coppe"] as string, App.Dict
         Application.Current.Quit();
     }
 }
+

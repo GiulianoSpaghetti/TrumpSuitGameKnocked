@@ -7,6 +7,10 @@ Questo gioco dimostra che la teoria dei giochi è vera: l'algorimo brevettato fu
 
 Best used on android 16.1
 
+
+
+[fatti spiegare il progetto da gemini](https://g.co/gemini/share/a007ef5993e1) basta loggarsi col proprio account Google 
+
 ## TrumpSuitGameKnocked
 Quello che avete davanti non è il gioco della briscola come si intende oggi, perché oggi tutti i simulatori di briscola dicono "hai preso l'asso, bravo" e finisce lì. Quello che avete davanti è un simulatore equo e professionale, con punteggio aggiornato in tempo reale, in modo da poter decidere se "rischiare" o meno coscientemente, scritto in maui, internazionalizzato in inglese, francese, spagnolo, tedesco, italiano e portoghese.
 Su windows per cambiare il dialetto é sufficente modificare le impostazioni di sistema, su android 14 e 15 pure, sui precedenti bisogna disinstallare e reinstallare il programma.

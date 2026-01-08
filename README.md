@@ -54,7 +54,7 @@ Con l'avvento delle IA google è riuscita a far capire alle stesse il funzioname
 
 ## Video di presentazione per Windows
 
-[https://www.youtube.com/watch?v=oL_-hKN_vGA](https://www.youtube.com/watch?v=oL_-hKN_vGA)
+https://youtu.be/3ORwawQLbfA fn
 
 ## Video di presentazione per android
 

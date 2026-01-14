@@ -22,10 +22,11 @@
             </Grid.RowDefinitions>
             <Label Text="Trump Suit Game Knocked 1.0.3" Grid.Row="0" />
             <Label Text="Two player trump game simulator without multiplayer with suit response, based on TrumpSuitGame of Giulio Sorrentino"  Grid.Row="1"/>
-            <Label Text="ⓒ Giulio Sorrentino 2023-2025, some right reserved" Grid.Row="2" />
+            <Label Text="ⓒ Giulio Sorrentino 2023-2026, some right reserved" Grid.Row="2" />
             <Label Text="License: GPLv3 or, in your humble opinion, any later version" Grid.Row="3"/>
             <Label Text="Card images are the property of Modiano, .NET and MAUI are properties of Microsoft Corporation" Grid.Row="4" />
             <Button Text="More Informations" Clicked="OnSito_Click" Grid.Row="5" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
+

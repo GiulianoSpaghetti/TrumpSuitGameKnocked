@@ -62,7 +62,7 @@ https://youtu.be/3ORwawQLbfA
 
 ## Video di presentazione per android
 
-[https://youtu.be/coAx5hXJi5s](https://youtu.be/coAx5hXJi5s)
+https://www.youtube.com/watch?v=NZ0fEwYRjh4
 
 ## Come installare
 

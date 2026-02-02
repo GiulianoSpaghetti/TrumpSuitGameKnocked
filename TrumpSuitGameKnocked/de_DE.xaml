@@ -54,4 +54,6 @@
     <system:String x:Key="Fiori">Kreuz</system:String>
     <system:String x:Key="Picche">Pik</system:String>
     <system:String x:Key="ColMazzo">mit%20Deck%20</system:String>
+    <system:String x:Key="Autore">Google Translator</system:String>
+    <system:String x:Key="Revisore">>&#160;</system:String>
 </ResourceDictionary>

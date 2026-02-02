@@ -27,10 +27,10 @@ public partial class MainPage : ContentPage
         avvisaTalloneFinito = Preferences.Get("avvisaTalloneFinito", true);
         secondi = (UInt16)Preferences.Get("secondi", 5);
         e = new ElaboratoreCarteBriscola(briscolaDaPunti);
-        m = new Mazzo(e, "Napoletano");
         mazzo = Preferences.Get("mazzo", "Napoletano");
-        if (mazzo=="Siciliano")
-            LoadSicilianoDeck();
+        m = new Mazzo(e, "Napoletano");
+        if (mazzo != "Napoletano")
+            CaricaMazzo(mazzo);
         Carta.Inizializza(m, 40, new org.altervista.numerone.framework.briscola.CartaHelper(e.CartaBriscola),
 App.Dictionary["bastoni"] as string, App.Dictionary["coppe"] as string, App.Dictionary["denari"] as string, App.Dictionary["spade"] as string, App.Dictionary["Fiori"] as string, App.Dictionary["Quadri"] as string, App.Dictionary["Cuori"] as string, App.Dictionary["Picche"] as string
 );
@@ -309,14 +309,11 @@ App.Dictionary["bastoni"] as string, App.Dictionary["coppe"] as string, App.Dict
         s = Preferences.Get("mazzo", "Napoletano");
         if (s != mazzo)
         {
-            if (s == "Siciliano")
-                LoadSicilianoDeck();
-            else if (s == "Napoletano")
-                LoadNapoletanoDeck();
-
+            CaricaMazzo(s); ;
             Carta.SetSemiStr(m,
 App.Dictionary["bastoni"] as string, App.Dictionary["coppe"] as string, App.Dictionary["denari"] as string, App.Dictionary["spade"] as string, App.Dictionary["Fiori"] as string, App.Dictionary["Quadri"] as string, App.Dictionary["Cuori"] as string, App.Dictionary["Picche"] as string
 );
+            CartaBriscola.Text = $"{App.Dictionary["IlSemeDiBriscolaE"]}: {briscola.SemeStr}";
             mazzo = s;
         }
         aggiornaNomi = true;
@@ -451,6 +448,69 @@ App.Dictionary["bastoni"] as string, App.Dictionary["coppe"] as string, App.Dict
         Cpu1.Source = "retro_carte_pc.png";
         Cpu2.Source = "retro_carte_pc.png";
         m.SetNome("Napoletano");
+    }
+    private void LoadTrevigianoDeck()
+    {
+        n0.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\0.png").Result);
+        n1.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\1.png").Result);
+        n2.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\2.png").Result);
+        n3.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\3.png").Result);
+        n4.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\4.png").Result);
+        n5.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\5.png").Result);
+        n6.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\6.png").Result);
+        n7.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\7.png").Result);
+        n8.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\8.png").Result);
+        n9.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\9.png").Result);
+        n10.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\10.png").Result);
+        n11.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\11.png").Result);
+        n12.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\12.png").Result);
+        n13.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\13.png").Result);
+        n14.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\14.png").Result);
+        n15.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\15.png").Result);
+        n16.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\16.png").Result);
+        n17.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\17.png").Result);
+        n18.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\18.png").Result);
+        n19.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\19.png").Result);
+        n20.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\20.png").Result);
+        n21.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\21.png").Result);
+        n22.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\22.png").Result);
+        n23.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\23.png").Result);
+        n24.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\24.png").Result);
+        n25.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\25.png").Result);
+        n26.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\26.png").Result);
+        n27.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\27.png").Result);
+        n28.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\28.png").Result);
+        n29.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\29.png").Result);
+        n30.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\30.png").Result);
+        n31.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\31.png").Result);
+        n32.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\32.png").Result);
+        n33.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\33.png").Result);
+        n34.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\34.png").Result);
+        n35.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\35.png").Result);
+        n36.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\36.png").Result);
+        n37.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\37.png").Result);
+        n38.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\38.png").Result);
+        n39.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\39.png").Result);
+        Cpu0.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\retro_carte_pc.png").Result);
+        Cpu1.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\retro_carte_pc.png").Result);
+        Cpu2.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\retro_carte_pc.png").Result);
+        m.SetNome("Trevigiano");
+    }
+
+    private void CaricaMazzo(string quale)
+    {
+        switch (quale)
+        {
+            case "Siciliano":
+                LoadSicilianoDeck();
+                break;
+            case "Trevigiano":
+                LoadTrevigianoDeck();
+                break;
+            default:
+                LoadNapoletanoDeck();
+                break;
+        }
     }
 }
 

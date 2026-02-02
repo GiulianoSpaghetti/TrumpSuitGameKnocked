@@ -11,6 +11,9 @@ public partial class InfoPage : ContentPage
 	{
         InitializeComponent();
         Title = $"{App.Dictionary["Informazioni"]}";
+        TranslatorCredit.Text = $"Tranlsator: {App.Dictionary["Autore"]}";
+        if (App.Dictionary["Revisore"].ToString().Trim() != "")
+            RevisorCredit.Text = $"Revisor: {App.Dictionary["Revisore"]}";
     }
     private async void OnSito_Click(object sender, EventArgs e)
     {
@@ -19,16 +22,21 @@ public partial class InfoPage : ContentPage
 
     protected override void OnAppearing()
     {
+        String mazzo, s = "Card images are the property of Modiano", s1 = "";
         base.OnAppearing();
-        if (Preferences.Get("mazzo", "Napoletano")=="Siciliano")
+        mazzo = Preferences.Get("mazzo", "Napoletano");
+        switch (mazzo)
         {
-            s = new StreamReader(FileSystem.OpenAppPackageFileAsync("Mazzi/Siciliano/credits.txt").Result).ReadToEnd();
-            s=$", {s}";
+            case "Siciliano":
+                s1 = new StreamReader(FileSystem.OpenAppPackageFileAsync("Mazzi/Siciliano/credits.txt").Result).ReadToEnd();
+                s1 = $", {s1}";
+                break;
+            case "Trevigiano":
+                s1 = new StreamReader(FileSystem.OpenAppPackageFileAsync("Mazzi/Trevigiano/credits.txt").Result).ReadToEnd();
+                s1 = $", {s1}";
+                break;
         }
-        else
-            s = "";
-
-        Credits.Text = $"Card images are the property of Modiano{s}, .NET and MAUI are properties of Microsoft Corporation";
+        Credits.Text = $"{s}{s1} .NET and MAUI are properties of Microsoft Corporation";
     }
 
 }

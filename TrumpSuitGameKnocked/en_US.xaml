@@ -54,4 +54,6 @@
     <system:String x:Key="Fiori">Clubs</system:String>
     <system:String x:Key="Picche">Spades</system:String>
     <system:String x:Key="ColMazzo">con%20dla%20baraja%20</system:String>
+    <system:String x:Key="Autore">Google Translator</system:String>
+    <system:String x:Key="Revisore">Giulio Sorrentino</system:String>
 </ResourceDictionary>

@@ -7,15 +7,15 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
-                <Setter Property="TextColor" Value="White" />
-            </Style>
-            <Style TargetType="Entry">
-                <Setter Property="TextColor" Value="White" />
-            </Style>
-            <Style TargetType="Picker">
-                <Setter Property="TextColor" Value="White" />
-            </Style>
-        </ResourceDictionary>
+                    <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                </Style>
+                <Style TargetType="Entry">
+                    <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                </Style>
+                <Style TargetType="Picker">
+                    <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                </Style>
+            </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
         <Grid>
@@ -50,12 +50,18 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-            <Switch x:Name="swCartaBriscola" Grid.Row="5" Grid.Column="1" />
-            <Label x:Name="lbCartaBriscola" Grid.Row="5" Grid.Column="0" Text="" Grid.ColumnSpan="2" />
-            <Switch x:Name="swAvvisaTallone" Grid.Row="6" Grid.Column="1" />
-            <Label x:Name="lbAvvisaTallone" Grid.Row="6" Grid.Column="0" Text="" Grid.ColumnSpan="2" />
-            <Button x:Name="btnOk" Text="" Clicked="OnOk_Click"  Grid.Row="7" Grid.Column="1" />
-            <Button x:Name="btnSiciliano" Text="Load Siciliano Deck" Clicked="OnSiciliano_Click" Grid.Row="7" Grid.Column="0" />
+            <Label x:Name="lblMazzi" Grid.Row="5" Grid.Column="0" Text="Livello" />
+            <Picker x:Name="pkrmazzi" Title="" Grid.Row="5" Grid.Column="1">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}" x:Name="amazzi">
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Switch x:Name="swCartaBriscola" Grid.Row="6" Grid.Column="1" />
+            <Label x:Name="lbCartaBriscola" Grid.Row="6" Grid.Column="0" Text="" Grid.ColumnSpan="2" />
+            <Switch x:Name="swAvvisaTallone" Grid.Row="7" Grid.Column="1" />
+            <Label x:Name="lbAvvisaTallone" Grid.Row="7" Grid.Column="0" Text="" Grid.ColumnSpan="2" />
+            <Button x:Name="btnOk" Text="" Clicked="OnOk_Click"  Grid.Row="8" Grid.Column="1" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

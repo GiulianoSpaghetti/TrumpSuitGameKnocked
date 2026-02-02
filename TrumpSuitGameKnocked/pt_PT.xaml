@@ -54,4 +54,6 @@
     <system:String x:Key="Fiori">Paus</system:String>
     <system:String x:Key="Picche">Espadas</system:String>
     <system:String x:Key="ColMazzo">com%20baralho%20</system:String>
+    <system:String x:Key="Autore">Google Translator</system:String>
+    <system:String x:Key="Revisore">>&#160;</system:String>
 </ResourceDictionary>

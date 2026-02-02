@@ -1,5 +1,6 @@
 using CommunityToolkit.Maui.Alerts;
 using org.altervista.numerone.framework;
+using System.Collections.ObjectModel;
 using System.Threading;
 
 namespace TrumpSuitGameKnocked;
@@ -13,6 +14,7 @@ public partial class OpzioniPage : ContentPage
     private Stream s;
     public OpzioniPage()
     {
+        ObservableCollection<string> _mazzi = new ObservableCollection<string>();
         InitializeComponent();
         livello = (UInt16)Preferences.Get("livello", 3);
         txtNomeUtente.Text = Preferences.Get("nomeUtente", "numerone");
@@ -32,19 +34,33 @@ public partial class OpzioniPage : ContentPage
         lbCartaBriscola.Text= $"{App.Dictionary["BriscolaDaPunti"]}";
         lbAvvisaTallone.Text= $"{App.Dictionary["AvvisaTallone"]}";
         btnOk.Text= $"{App.Dictionary["Salva"]}";
-        btnSiciliano.Text = $"{App.Dictionary["MazzoAlternativo"]}";
+        btnOk.Text = $"{App.Dictionary["Salva"]}";
+        lblMazzi.Text = $"{App.Dictionary["MazzoAlternativo"]}";;
+        _mazzi.Add("Napoletano");
         try
         {
             s = FileSystem.OpenAppPackageFileAsync("Mazzi\\Siciliano\\0.png").Result;
+            _mazzi.Add("Siciliano");
+            s.Close();
         }
         catch (AggregateException ex)
         {
-            btnSiciliano.IsEnabled = false;
+
         }
-        catch (IOException ex)
+        try
         {
-            btnSiciliano.IsEnabled = false;
+            s = FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\0.png").Result;
+            _mazzi.Add("Trevigiano");
+            s.Close();
         }
+        catch (AggregateException ex)
+        {
+
+        }
+        pkrmazzi.ItemsSource = _mazzi;
+        string mazzo = Preferences.Get("mazzo", "Napoletano");
+        pkrmazzi.SelectedItem = mazzo;
+
     }
 
     public async void OnOk_Click(Object source, EventArgs evt)
@@ -78,6 +94,7 @@ public partial class OpzioniPage : ContentPage
         }
         Preferences.Set("secondi", secondi);
         Preferences.Set("livello", pkrlivello.SelectedIndex + 1);
+        Preferences.Set("mazzo", pkrmazzi.SelectedItem == null ? "Naèpoletano" : pkrmazzi.SelectedItem.ToString());
 #if ANDROID
         AppShell.aggiorna = true;
 #else
@@ -85,21 +102,4 @@ public partial class OpzioniPage : ContentPage
 #endif
         await Shell.Current.GoToAsync("//Main");
     }
-
-    public async void OnSiciliano_Click(Object source, EventArgs evt)
-    {
-        string s = Preferences.Get("mazzo", "Napoletano");
-            if (s=="Napoletano")
-                Preferences.Set("mazzo", "Siciliano");            
-            else
-            Preferences.Set("mazzo", "Napoletano");
-#if ANDROID
-        AppShell.aggiorna = true;
-#else
-        AppShellWindows.aggiorna = true;
-#endif
-        await Shell.Current.GoToAsync("//Main");
-
-    }
-
 }

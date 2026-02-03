@@ -54,4 +54,6 @@
     <system:String x:Key="Fiori">Fiori</system:String>
     <system:String x:Key="Picche">Picche</system:String>
     <system:String x:Key="ColMazzo">col%20mazzo%20</system:String>
+    <system:String x:Key="Autore">Giulio Sorrentino</system:String>
+    <system:String x:Key="Revisore">&#160;</system:String>
 </ResourceDictionary>

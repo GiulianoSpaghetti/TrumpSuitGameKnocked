@@ -47,7 +47,13 @@
     <system:String x:Key="a">a</system:String>
     <system:String x:Key="piattaforma">en%20plataforma</system:String>
     <system:String x:Key="EffettuaSecondaPartita">¿Hace un segundo juego?</system:String>
-    <system:String x:Key="MossaNonConsentita">Tienes que responder a la traje</system:String>
+    <system:String x:Key="MossaNonConsentita">Tienes que responder a la traje</system:String>ù
+    <system:String x:Key="MazzoAlternativo">Cargar baraja alternativa</system:String>
+    <system:String x:Key="Cuori">Corazon</system:String>
+    <system:String x:Key="Quadri">Diamantes</system:String>
+    <system:String x:Key="Fiori">Tréboles</system:String>
+    <system:String x:Key="Picche">Picas</system:String>
+    <system:String x:Key="ColMazzo">con%20dla%20baraja%20</system:String>
     <system:String x:Key="Autore">Google Translator</system:String>
     <system:String x:Key="Revisore">>&#160;</system:String>
 </ResourceDictionary>

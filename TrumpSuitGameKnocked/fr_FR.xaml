@@ -47,7 +47,7 @@
     <system:String x:Key="a">-</system:String>
     <system:String x:Key="piattaforma">sur%20la%20plateforme</system:String>
     <system:String x:Key="EffettuaSecondaPartita">Veux-tu jouer un deuxième jeu?</system:String>
-    <system:String x:Key="MossaNonConsentita">Vous devez répondre à la costume</system:String>
+    <system:String x:Key="MossaNonConsentita">Vous devez répondre à color</system:String>
     <system:String x:Key="MazzoAlternativo">Coix le jeu alternatif</system:String>
     <system:String x:Key="Cuori">Cœur</system:String>
     <system:String x:Key="Quadri">Carreau</system:String>
@@ -55,5 +55,5 @@
     <system:String x:Key="Picche">Pique</system:String>
     <system:String x:Key="ColMazzo">avec%20le%20jeu%20</system:String>
     <system:String x:Key="Autore">Google Translator</system:String>
-    <system:String x:Key="Revisore">&#160;</system:String>
+    <system:String x:Key="Revisore">Guido Sorrentino</system:String>
 </ResourceDictionary>

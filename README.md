@@ -1,3 +1,4 @@
+[![.NET MAUI Build](https://github.com/GiulianoSpaghetti/TrumpSuitGameKnocked/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/GiulianoSpaghetti/TrumpSuitGameKnocked/actions/workflows/dotnet-desktop.yml)
 
 :it: Made in Italy. Il primo software in Maui che secondo Google non crasha.
 

@@ -1,9 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11822.322 stable
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrumpSuitGameKnocked", "TrumpSuitGameKnocked\TrumpSuitGameKnocked.csproj", "{D714E7E6-8DD5-475F-A077-AC47E7FA9D3B}"EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrumpSuitGameKnocked", "TrumpSuitGameKnocked\TrumpSuitGameKnocked.csproj", "{D714E7E6-8DD5-475F-A077-AC47E7FA9D3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +19,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52ECE8CD-0A8E-45A5-BB49-8F92DE6E46BC}
 	EndGlobalSection
 EndGlobal

@@ -34,8 +34,7 @@ public partial class OpzioniPage : ContentPage
         lbCartaBriscola.Text= $"{App.Dictionary["BriscolaDaPunti"]}";
         lbAvvisaTallone.Text= $"{App.Dictionary["AvvisaTallone"]}";
         btnOk.Text= $"{App.Dictionary["Salva"]}";
-        btnOk.Text = $"{App.Dictionary["Salva"]}";
-        lblMazzi.Text = $"{App.Dictionary["MazzoAlternativo"]}";;
+        lblMazzi.Text = $"{App.Dictionary["MazzoAlternativo"]}";
         _mazzi.Add("Napoletano");
         try
         {
@@ -47,6 +46,14 @@ public partial class OpzioniPage : ContentPage
         {
 
         }
+        catch (FileNotFoundException ex)
+        {
+
+        }
+        catch (DirectoryNotFoundException ex)
+        {
+
+        }
         try
         {
             s = FileSystem.OpenAppPackageFileAsync("Mazzi\\Trevigiano\\0.png").Result;
@@ -54,6 +61,14 @@ public partial class OpzioniPage : ContentPage
             s.Close();
         }
         catch (AggregateException ex)
+        {
+
+        }
+        catch (FileNotFoundException ex)
+        {
+
+        }
+        catch (DirectoryNotFoundException ex)
         {
 
         }
@@ -94,7 +109,7 @@ public partial class OpzioniPage : ContentPage
         }
         Preferences.Set("secondi", secondi);
         Preferences.Set("livello", pkrlivello.SelectedIndex + 1);
-        Preferences.Set("mazzo", pkrmazzi.SelectedItem == null ? "Naèpoletano" : pkrmazzi.SelectedItem.ToString());
+        Preferences.Set("mazzo", pkrmazzi.SelectedItem == null ? "Napoletano" : pkrmazzi.SelectedItem.ToString());
 #if ANDROID
         AppShell.aggiorna = true;
 #else

@@ -55,5 +55,5 @@
     <system:String x:Key="Picche">Picas</system:String>
     <system:String x:Key="ColMazzo">con%20dla%20baraja%20</system:String>
     <system:String x:Key="Autore">Google Translator</system:String>
-    <system:String x:Key="Revisore">>&#160;</system:String>
+    <system:String x:Key="Revisore">Ilde</system:String>
 </ResourceDictionary>

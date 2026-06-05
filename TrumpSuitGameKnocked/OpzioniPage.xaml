@@ -42,20 +42,15 @@
             <Entry x:Name="txtSecondi" Grid.Row="2" Grid.Column="1" Keyboard="Numeric" IsSpellCheckEnabled="False" />
             <Label x:Name="lbLivello" Grid.Row="4" Grid.Column="0" Text="Livello" />
             <Picker x:Name="pkrlivello" Title="" Grid.Row="4" Grid.Column="1">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
+                <Picker.Items>
                         <x:String>1</x:String>
                         <x:String>2</x:String>
                         <x:String>3</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
+                </Picker.Items>
             </Picker>
             <Label x:Name="lblMazzi" Grid.Row="5" Grid.Column="0" Text="Livello" />
             <Picker x:Name="pkrmazzi" Title="" Grid.Row="5" Grid.Column="1">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}" x:Name="amazzi">
-                    </x:Array>
-                </Picker.ItemsSource>
+                <Picker.Items></Picker.Items>
             </Picker>
             <Switch x:Name="swCartaBriscola" Grid.Row="6" Grid.Column="1" />
             <Label x:Name="lbCartaBriscola" Grid.Row="6" Grid.Column="0" Text="" Grid.ColumnSpan="2" />

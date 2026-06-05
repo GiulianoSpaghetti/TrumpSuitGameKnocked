@@ -7,12 +7,12 @@
     <system:String x:Key="PuntiDiSuffisso">&#160;</system:String>
     <system:String x:Key="NelMazzoRimangono">Il reste</system:String>
     <system:String x:Key="carte">&#160;cartes dans le cartes</system:String>
-    <system:String x:Key="IlSemeDiBriscolaE">Le costume d'atout est</system:String>
+    <system:String x:Key="IlSemeDiBriscolaE">Le colour d'atout est</system:String>
     <system:String x:Key="BriscolaDaPunti">La carte désignant l'atout peut avoir un poids</system:String>
     <system:String x:Key="AvvisaTallone">Alertes lorsque le jeu se termine</system:String>
     <system:String x:Key="NomeUtente">Nom d'utilisateur</system:String>
     <system:String x:Key="NomeCpu">Nom du processeur</system:String>
-    <system:String x:Key="secondi">Secondes pendant lesquelles montrer les pièces</system:String>
+    <system:String x:Key="secondi">Secondes pendant lesquelles montrer le jouée</system:String>
     <system:String x:Key="Applicazione">jeu d'atout avec réponse de couleur</system:String>
     <system:String x:Key="Informazioni">Reisegnements</system:String>
     <system:String x:Key="Opzioni">Choix</system:String>
@@ -46,7 +46,7 @@
     <system:String x:Key="efinito">ça%20a%20fini</system:String>
     <system:String x:Key="a">-</system:String>
     <system:String x:Key="piattaforma">sur%20la%20plateforme</system:String>
-    <system:String x:Key="EffettuaSecondaPartita">Veux-tu jouer un deuxième jeu?</system:String>
+    <system:String x:Key="EffettuaSecondaPartita">Veux-tu jouer un deuxième partie?</system:String>
     <system:String x:Key="MossaNonConsentita">Vous devez répondre à color</system:String>
     <system:String x:Key="MazzoAlternativo">Coix le jeu alternatif</system:String>
     <system:String x:Key="Cuori">Cœur</system:String>

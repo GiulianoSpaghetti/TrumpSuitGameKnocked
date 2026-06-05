@@ -1,0 +1,58 @@
+name: .NET MAUI Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        configuration: [Release]
+
+    env:
+      Solution_Name: TrumpSuitGame.slnx
+      Configuration: ${{ matrix.configuration }}
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 10.0.x
+
+    - name: Import PFX certificate
+      run: |
+        $pfx_password = ConvertTo-SecureString "${{ secrets.PFX_KEY }}" -AsPlainText -Force
+        $pfxBytes = [System.Convert]::FromBase64String("${{ secrets.BASE64_ENCODED_PFX }}")
+        $pfxPath = Join-Path $env:RUNNER_TEMP "signing.pfx"
+        [System.IO.File]::WriteAllBytes($pfxPath, $pfxBytes)
+        Import-PfxCertificate -FilePath $pfxPath -CertStoreLocation Cert:\CurrentUser\My -Password $pfx_Password
+        Write-Host "Certificate safely imported to store."
+      shell: pwsh
+
+    - name: Install MAUI Workload
+      run: dotnet workload install maui
+
+    - name: Restore packages
+      run: dotnet restore TrumpSuitGameKnocked.slnx
+
+    - name: Build MAUI MSIX
+      run: |
+        dotnet publish TrumpSuitGameKnocked/TrumpSuitGameKnocked.csproj -f net10.0-windows10.0.26100.0 -c $env:Configuration
+      shell: pwsh
+
+    - name: Upload MSIX artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: MSIX
+        path: TrumpSuitGameKnocked/AppPackages
+        include-hidden-files: true
+        if-no-files-found: error

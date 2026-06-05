@@ -1,3 +1,4 @@
+
 :it: Made in Italy. Il primo software in Maui che secondo Google non crasha.
 
 Questo gioco dimostra che la teoria dei giochi è vera: l'algorimo brevettato funziona su tutti i giochi di carte senza piatto, questo in gergo è il "poker".

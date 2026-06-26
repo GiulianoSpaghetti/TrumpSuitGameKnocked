@@ -19,7 +19,7 @@ jobs:
       Framework: net10.0-windows10.0.26100.0
     steps:
     - name: Checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
       with:
         fetch-depth: 0
 

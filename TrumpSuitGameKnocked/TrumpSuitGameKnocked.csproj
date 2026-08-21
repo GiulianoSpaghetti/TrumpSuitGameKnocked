@@ -76,12 +76,12 @@
 
 <ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="14.2.2" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.90" />
-		<PackageReference Include="CardFramework.Maui" Version="1.6.19" />
-		<PackageReference Include="Microsoft.NET.ILLink.Tasks" Version="10.0.10" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.1000" />
+		<PackageReference Include="CardFramework.Maui" Version="1.6.21" />
+		<PackageReference Include="Microsoft.NET.ILLink.Tasks" Version="10.0.11" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net10.0-windows10.0.26100.0'">
-		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.2270" />
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.2526" />
 		<PackageReference Include="Microsoft.Windows.SDK.BuildTools.MSIX" Version="1.7.260610101">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

@@ -76,7 +76,7 @@
 
 <ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="14.2.2" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.1000" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.100" />
 		<PackageReference Include="CardFramework.Maui" Version="1.6.21" />
 		<PackageReference Include="Microsoft.NET.ILLink.Tasks" Version="10.0.11" />
 	</ItemGroup>

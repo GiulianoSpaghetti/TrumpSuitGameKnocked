@@ -79,8 +79,6 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.110" />
 		<PackageReference Include="CardFramework.Maui" Version="1.6.24" />
 		<PackageReference Include="Microsoft.NET.ILLink.Tasks" Version="10.0.12" />
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="2.5.1" />
-		<PackageReference Include="Microsoft.WindowsAppSDK.AI" Version="2.5.5" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net10.0-windows10.0.26100.0'">
 		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.2705" />
@@ -88,5 +86,7 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="2.5.1" />
+		<PackageReference Include="Microsoft.WindowsAppSDK.AI" Version="2.5.5" />
 	</ItemGroup>
 </Project>

@@ -15,7 +15,7 @@ jobs:
     env:
       Solution_Name: TrumpSuitGameKnocked #use this even on line 57
       Configuration: ${{ matrix.configuration }}
-      Architecture: win-x64
+      Architecture: win-arm64
       Framework: net10.0-windows10.0.26100.0
     steps:
     - name: Checkout

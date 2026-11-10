@@ -16,7 +16,7 @@ jobs:
       Solution_Name: TrumpSuitGameKnocked #use this even on line 57
       Configuration: ${{ matrix.configuration }}
       Architecture: win-arm64
-      Framework: net10.0-windows10.0.26100.0
+      Framework: net10.0-windows11.0.26100.0
     steps:
     - name: Checkout
       uses: actions/checkout@v7
@@ -26,7 +26,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 10.0.x
+        dotnet-version: 11.0.x
         
     - name: Import PFX certificate
       run: |

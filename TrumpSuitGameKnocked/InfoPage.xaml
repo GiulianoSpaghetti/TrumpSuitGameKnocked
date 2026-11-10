@@ -12,7 +12,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Trump Suit Game Knocked 1.2" />
+            <Label Text="Trump Suit Game Knocked 1.3" />
             <Label Text="Two player trump game simulator without multiplayer with suit response, based on TrumpSuitGame of Giulio Sorrentino" />
             <Label Text="ⓒ Giulio Sorrentino 2023-2026, some right reserved" />
             <Label Text="License: GPLv3 or, in your humble opinion, any later version" />
